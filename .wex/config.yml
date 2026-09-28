@@ -1,0 +1,7 @@
+domain: symfony-data-sync-ds.wex
+global:
+  name: symfony-data-sync-ds
+  type: php-package
+  version: 1.0.0
+wex:
+  version: 6.0.136
