@@ -1,0 +1,3 @@
+`symfony-data-sync-ds` is the screen of `symfony-data-sync`, built on the design system. `/data-sync/` lists the definitions; each definition's page loads its plan as a dry run and shows every relation — link, create, update, unlink, conflict, candidate — with, for updates and conflicts, the differing fields side by side: local value, the direction it will travel, remote value, the side to be written in bold.
+
+From there a human does what the planner must not: link a candidate the fuzzy rule proposed, then apply the plan, which writes on both sides. Access follows a configurable role, `ROLE_ADMIN` by default.

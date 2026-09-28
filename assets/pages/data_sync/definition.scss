@@ -1,0 +1,28 @@
+.data-sync--summary {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 1rem;
+}
+
+.data-sync--actions {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.data-sync--diff {
+  width: 100%;
+
+  .data-sync--target {
+    text-align: center;
+    opacity: 0.6;
+  }
+
+  .is-written {
+    font-weight: bold;
+  }
+}
+
+.data-sync--cell-wrap {
+  overflow-wrap: anywhere;
+}

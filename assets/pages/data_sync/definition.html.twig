@@ -1,0 +1,59 @@
+{%- extends '@front/layouts/private/layout.html.twig' -%}
+
+{%- set page_show_title = true -%}
+
+{%- block page_body -%}
+    {#- One marker per operation, rendered here so the script swaps design-system markup instead of rebuilding it. -#}
+    {%- set markers = {
+        loading: 'running',
+        local_link: 'info', local_create: 'info', remote_create: 'info', local_update: 'info', remote_update: 'info',
+        local_unlink: 'warning', remote_disable: 'warning', candidate: 'warning',
+        remote_remove: 'error', conflict: 'error',
+        unmatched: 'skipped', postponed: 'paused', up_to_date: 'success'
+    } -%}
+    {%- for operation, type in markers -%}
+        <template class="data-sync--marker" data-operation="{{ operation }}">{{ marker(type, ('@page::operation.' ~ operation) | trans, { compact: true }) }}</template>
+    {%- endfor -%}
+
+    <section class="block block--card data-sync--definition" data-definition="{{ definition.key }}">
+        <div class="block--body">
+            <dl class="data-sync--summary">
+                <dt>{{ '@page::summary.local' | trans }}</dt><dd><code>{{ definition.localClass }}</code></dd>
+                <dt>{{ '@page::summary.remote' | trans }}</dt><dd><code>{{ adapter_class }}</code></dd>
+                <dt>{{ '@page::summary.orphans' | trans }}</dt><dd>{{ definition.orphanRemote.value }} / {{ definition.orphanLocal.value }}</dd>
+                <dt>{{ '@page::summary.conflict' | trans }}</dt><dd>{{ definition.conflict.value }}</dd>
+            </dl>
+
+            <div class="data-sync--actions">
+                <button type="button" class="button data-sync--refresh">{{ '@page::action.refresh' | trans }}</button>
+                <button type="button" class="button button--invert data-sync--apply" data-confirm="{{ '@page::action.apply_confirm' | trans }}">{{ '@page::action.apply' | trans }}</button>
+            </div>
+
+            <p class="data-sync--status" role="status"></p>
+
+            <table class="table data-sync--plan">
+                <thead>
+                <tr class="table--row">
+                    <th class="table--cell" scope="col">{{ '@page::column.operation' | trans }}</th>
+                    <th class="table--cell" scope="col">{{ '@page::column.local' | trans }}</th>
+                    <th class="table--cell" scope="col">{{ '@page::column.remote' | trans }}</th>
+                    <th class="table--cell" scope="col">{{ '@page::column.reason' | trans }}</th>
+                    <th class="table--cell" scope="col">{{ '@page::column.outcome' | trans }}</th>
+                    <th class="table--cell" scope="col"></th>
+                </tr>
+                </thead>
+                <tbody class="data-sync--relations"></tbody>
+            </table>
+
+            <template class="data-sync--labels"
+                      data-empty="{{ '@page::empty' | trans }}"
+                      data-dry-run="{{ '@page::status.dry_run' | trans }}"
+                      data-applied="{{ '@page::status.applied' | trans }}"
+                      data-link="{{ '@page::action.link' | trans }}"
+                      data-diff="{{ '@page::action.diff' | trans }}"
+                      data-field="{{ '@page::diff.field' | trans }}"
+                      data-local="{{ '@page::diff.local' | trans }}"
+                      data-remote="{{ '@page::diff.remote' | trans }}"></template>
+        </div>
+    </section>
+{%- endblock -%}

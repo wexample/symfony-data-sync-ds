@@ -1,0 +1,42 @@
+page_title: Sync plan
+page_icon: ph:bold/arrows-left-right
+empty: Nothing to do: both sides agree.
+summary:
+  local: Local entities
+  remote: Remote adapter
+  orphans: Orphans (remote / local)
+  conflict: Conflicts
+column:
+  operation: Operation
+  local: Local
+  remote: Remote
+  reason: Why
+  outcome: Outcome
+action:
+  refresh: Plan again
+  apply: Apply the plan
+  apply_confirm: Write every planned change on both sides?
+  link: Link
+  diff: Fields
+diff:
+  field: Field
+  local: Local value
+  remote: Remote value
+status:
+  dry_run: "Dry run: nothing written yet."
+  applied: Plan applied. Plan again to see what is left.
+operation:
+  loading: Planning
+  local_link: Link
+  local_create: Create locally
+  remote_create: Create remotely
+  local_update: Update
+  remote_update: Update remotely
+  local_unlink: Unlink
+  remote_disable: Disable remotely
+  remote_remove: Remove remotely
+  candidate: Candidate
+  conflict: Conflict
+  unmatched: Unmatched
+  postponed: Postponed
+  up_to_date: Up to date

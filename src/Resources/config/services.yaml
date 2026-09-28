@@ -1,0 +1,16 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Wexample\SymfonyDataSyncDs\Security\:
+        resource: '../../Security/'
+
+    Wexample\SymfonyDataSyncDs\Controller\:
+        resource: '../../Controller/'
+        tags: ['controller.service_arguments']
+
+    Wexample\SymfonyDataSyncDs\Api\Controller\:
+        resource: '../../Api/Controller/'
+        tags: ['controller.service_arguments']

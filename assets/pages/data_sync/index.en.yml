@@ -1,0 +1,7 @@
+page_title: Data sync
+page_icon: ph:bold/arrows-clockwise
+empty: No sync definition is declared in this application.
+column:
+  definition: Definition
+  local: Local entities
+  remote: Remote adapter

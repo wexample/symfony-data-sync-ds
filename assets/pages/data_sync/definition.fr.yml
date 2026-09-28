@@ -1,0 +1,42 @@
+page_title: Plan de synchronisation
+page_icon: ph:bold/arrows-left-right
+empty: "Rien à faire : les deux côtés sont d'accord."
+summary:
+  local: Entités locales
+  remote: Adapter distant
+  orphans: Orphelins (distants / locaux)
+  conflict: Conflits
+column:
+  operation: Opération
+  local: Local
+  remote: Distant
+  reason: Pourquoi
+  outcome: Résultat
+action:
+  refresh: Replanifier
+  apply: Appliquer le plan
+  apply_confirm: Écrire tous les changements prévus, des deux côtés ?
+  link: Lier
+  diff: Champs
+diff:
+  field: Champ
+  local: Valeur locale
+  remote: Valeur distante
+status:
+  dry_run: "Simulation : rien n'est encore écrit."
+  applied: Plan appliqué. Replanifiez pour voir ce qui reste.
+operation:
+  loading: Planification
+  local_link: Lier
+  local_create: Créer en local
+  remote_create: Créer à distance
+  local_update: Mettre à jour
+  remote_update: Mettre à jour à distance
+  local_unlink: Délier
+  remote_disable: Désactiver à distance
+  remote_remove: Supprimer à distance
+  candidate: Candidat
+  conflict: Conflit
+  unmatched: Sans correspondance
+  postponed: Reporté
+  up_to_date: À jour

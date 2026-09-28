@@ -1,0 +1,7 @@
+page_title: Synchronisation
+page_icon: ph:bold/arrows-clockwise
+empty: Aucune définition de synchronisation n'est déclarée dans cette application.
+column:
+  definition: Définition
+  local: Entités locales
+  remote: Adapter distant

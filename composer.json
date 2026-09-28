@@ -1,11 +1,48 @@
 {
   "name": "wexample/symfony-data-sync-ds",
-  "version": "1.0.2",
+  "description": "Design-system screens to review and apply symfony-data-sync plans",
   "type": "library",
   "license": "MIT",
+  "version": "1.0.2",
   "autoload": {
     "psr-4": {
       "Wexample\\SymfonyDataSyncDs\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wexample\\SymfonyDataSyncDs\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "weeger",
+      "email": "romain.weeger@wexample.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.5",
+    "wexample/symfony-api": "*",
+    "wexample/symfony-data-sync": "*",
+    "wexample/symfony-design-system": "*",
+    "wexample/symfony-helpers": "*",
+    "wexample/symfony-loader": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../*",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
+  "extra": {
+    "install": {
+      "bundle_env": "all"
     }
   }
 }
