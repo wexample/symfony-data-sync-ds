@@ -1,6 +1,6 @@
 page_title: Sync plan
 page_icon: ph:bold/arrows-left-right
-empty: Nothing to do: both sides agree.
+empty: "Nothing to do: both sides agree."
 summary:
   local: Local entities
   remote: Remote adapter
