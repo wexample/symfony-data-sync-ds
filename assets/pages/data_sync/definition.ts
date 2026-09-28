@@ -31,13 +31,16 @@ type Report = {
 
 const ROUTE_LINK = 'api_data_sync_link';
 const ROUTE_PLAN = 'api_data_sync_plan';
+const ROUTE_RESOLVE = 'api_data_sync_resolve';
 const ROUTE_RUN = 'api_data_sync_run';
 const OPERATION_CANDIDATE = 'candidate';
+const OPERATION_CONFLICT = 'conflict';
 const OPERATION_LOADING = 'loading';
 
 /**
  * Loads the definition's plan as a dry run, shows each relation with its field
- * differences side by side, and lets a human link a candidate or apply the plan.
+ * differences side by side, and lets a human link a candidate, settle a field
+ * conflict by keeping one side, or apply the plan.
  */
 export default class extends Page {
   private definitionKey = '';
@@ -67,8 +70,19 @@ export default class extends Page {
   }
 
   private async link(localId: string, remoteId: string): Promise<void> {
+    await this.act(ROUTE_LINK, { localId, remoteId });
+  }
+
+  private async resolve(localId: string, kept: 'local' | 'remote'): Promise<void> {
+    await this.act(ROUTE_RESOLVE, { localId, kept });
+  }
+
+  /**
+   * Posts a human decision, then plans again to show what is left.
+   */
+  private async act(route: string, body: unknown): Promise<void> {
     try {
-      await this.request(ROUTE_LINK, 'POST', { localId, remoteId });
+      await this.request(route, 'POST', body);
     } catch (error) {
       this.setStatus(this.errorMessage(error));
 
@@ -156,6 +170,15 @@ export default class extends Page {
       const localId = relation.local.id;
       const remoteId = relation.remote.id;
       container.append(this.button(this.label('link'), () => void this.link(localId, remoteId)));
+    }
+
+    // A field conflict on a known pair; an ambiguous match has no diffs to settle.
+    if (relation.operation === OPERATION_CONFLICT && relation.local && relation.remote && relation.diffs.length > 0) {
+      const localId = relation.local.id;
+      container.append(
+        this.button(this.label('keepLocal'), () => void this.resolve(localId, 'local')),
+        this.button(this.label('keepRemote'), () => void this.resolve(localId, 'remote')),
+      );
     }
 
     if (relation.diffs.length > 0) {

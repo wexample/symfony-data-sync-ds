@@ -17,6 +17,8 @@ action:
   apply: Appliquer le plan
   apply_confirm: Écrire tous les changements prévus, des deux côtés ?
   link: Lier
+  keep_local: Garder local
+  keep_remote: Garder distant
   diff: Champs
 diff:
   field: Champ

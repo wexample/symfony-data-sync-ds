@@ -14,6 +14,7 @@ use Wexample\SymfonyDataSync\Service\SyncDefinitionRegistry;
 use Wexample\SymfonyDataSync\Service\SyncExecutor;
 use Wexample\SymfonyDataSync\Service\SyncLinker;
 use Wexample\SymfonyDataSync\Service\SyncPlanner;
+use Wexample\SymfonyDataSync\Service\SyncResolver;
 use Wexample\SymfonyDataSync\Service\SyncRunner;
 use Wexample\SymfonyDataSync\Testing\InMemoryLocalStore;
 use Wexample\SymfonyDataSync\Testing\InMemoryRemoteAdapter;
@@ -46,7 +47,7 @@ class DataSyncControllerTest extends TestCase
                     'local_store' => 'locals',
                     'link_property' => 'remoteId',
                     'match' => [['local' => 'email', 'remote' => 'email', 'normalize' => ['email']]],
-                    'fields' => ['username' => 'username'],
+                    'fields' => ['username' => 'username', 'email' => ['remote' => 'email', 'direction' => 'both']],
                     'orphans' => ['local' => 'create_remote'],
                 ],
             ],
@@ -57,10 +58,12 @@ class DataSyncControllerTest extends TestCase
             new ServiceLocator(['remote' => fn () => $this->remote, 'locals' => fn () => $this->locals]),
         );
 
+        $planner = new SyncPlanner(new Matcher());
         $this->controller = new DataSyncController(
             $registry,
-            new SyncRunner($registry, new SyncPlanner(new Matcher()), new SyncExecutor()),
+            new SyncRunner($registry, $planner, new SyncExecutor()),
             new SyncLinker($registry),
+            new SyncResolver($registry, $planner, new SyncExecutor()),
         );
     }
 
@@ -97,6 +100,24 @@ class DataSyncControllerTest extends TestCase
 
         $this->assertSame('error', $envelope['type']);
         $this->assertSame('No remote item "nope".', $envelope['message']);
+    }
+
+    public function testAConflictIsResolvedByTheKeptSide(): void
+    {
+        $this->controller->run('users');
+        $envelope = $this->envelope($this->controller->resolve('users', $this->json(['localId' => 'u1', 'kept' => 'remote'])));
+
+        $this->assertSame('success', $envelope['type']);
+        $this->assertSame('ADA@example.test', $this->locals->entities['u1']->email);
+    }
+
+    public function testResolvingNeedsAKeptSide(): void
+    {
+        $this->controller->run('users');
+        $envelope = $this->envelope($this->controller->resolve('users', $this->json(['localId' => 'u1', 'kept' => 'none'])));
+
+        $this->assertSame('error', $envelope['type']);
+        $this->assertSame('ada@example.test', $this->locals->entities['u1']->email);
     }
 
     public function testAnUnknownDefinitionIsAnError(): void
