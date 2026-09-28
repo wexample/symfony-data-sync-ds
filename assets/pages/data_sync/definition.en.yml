@@ -7,12 +7,14 @@ summary:
   orphans: Orphans (remote / local)
   conflict: Conflicts
 column:
+  direction: Direction
   operation: Operation
   local: Local
   remote: Remote
   reason: Why
   outcome: Outcome
 action:
+  cancel: Cancel
   refresh: Plan again
   apply: Apply the plan
   apply_confirm: Write every planned change on both sides?

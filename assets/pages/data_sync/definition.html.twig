@@ -14,48 +14,73 @@
     {%- for operation, type in markers -%}
         <template class="data-sync--marker" data-operation="{{ operation }}">{{ marker(type, ('@page::operation.' ~ operation) | trans, { compact: true }) }}</template>
     {%- endfor -%}
+    {#- The glyphs the script draws with: which way a relation writes, and the
+        actions a row offers. -#}
+    {%- for name, glyph in {
+        'to-local': 'ph:bold/arrow-left',
+        'to-remote': 'ph:bold/arrow-right',
+        'both': 'ph:bold/arrows-left-right',
+        'none': 'ph:bold/minus',
+        'link': 'ph:bold/link',
+        'keep-local': 'ph:bold/arrow-fat-line-right',
+        'keep-remote': 'ph:bold/arrow-fat-line-left',
+        'diff': 'ph:bold/caret-down'
+    } -%}
+        <template class="data-sync--icon" data-name="{{ name }}">{{ icon(glyph) }}</template>
+    {%- endfor -%}
 
-    <section class="block block--card data-sync--definition" data-definition="{{ definition.key }}">
-        <div class="block--body">
-            <dl class="data-sync--summary">
-                <dt>{{ '@page::summary.local' | trans }}</dt><dd><code>{{ definition.localClass }}</code></dd>
-                <dt>{{ '@page::summary.remote' | trans }}</dt><dd><code>{{ adapter_class }}</code></dd>
-                <dt>{{ '@page::summary.orphans' | trans }}</dt><dd>{{ definition.orphanRemote.value }} / {{ definition.orphanLocal.value }}</dd>
-                <dt>{{ '@page::summary.conflict' | trans }}</dt><dd>{{ definition.conflict.value }}</dd>
-            </dl>
+    <section class="data-sync--definition stack--vertical"
+             data-definition="{{ definition.key }}"
+             data-apply-title="{{ '@page::action.apply' | trans }}"
+             data-apply-accept="{{ '@page::action.apply' | trans }}"
+             data-cancel="{{ '@page::action.cancel' | trans }}">
+        {#- What is kept in step with what, and the rules it follows. -#}
+        {{ properties([
+            { key: '@page::summary.local' | trans, value: include('@WexampleSymfonyDataSyncDsBundle/pages/data_sync/_class_name.html.twig', { fqcn: definition.localClass }), html: true },
+            { key: '@page::summary.remote' | trans, value: include('@WexampleSymfonyDataSyncDsBundle/pages/data_sync/_class_name.html.twig', { fqcn: adapter_class }), html: true },
+            { key: '@page::summary.orphans' | trans, value: '<code>' ~ definition.orphanRemote.value ~ '</code> / <code>' ~ definition.orphanLocal.value ~ '</code>', html: true },
+            { key: '@page::summary.conflict' | trans, value: '<code>' ~ definition.conflict.value ~ '</code>', html: true },
+        ], { columns: true, class: 'data-sync--summary' }) }}
 
+        {#- The plan at a glance, then what can be done with it. -#}
+        <div class="data-sync--bar">
+            <div class="data-sync--overview" aria-live="polite"></div>
             <div class="data-sync--actions">
-                <button type="button" class="button data-sync--refresh">{{ '@page::action.refresh' | trans }}</button>
-                <button type="button" class="button button--invert data-sync--apply" data-confirm="{{ '@page::action.apply_confirm' | trans }}">{{ '@page::action.apply' | trans }}</button>
+                {{ button('ph:bold/arrows-clockwise', '@page::action.refresh' | trans, { class: 'data-sync--refresh' }) }}
+                {{ button('ph:bold/check', '@page::action.apply' | trans, { class: 'button--invert data-sync--apply', 'data-confirm': '@page::action.apply_confirm' | trans }) }}
             </div>
+        </div>
 
-            <p class="data-sync--status" role="status"></p>
+        <div class="message message--info message--compact data-sync--status" role="status" hidden>
+            <div>{{ icon('ph:bold/info', 'message--icon') }} <span class="data-sync--status-text"></span></div>
+        </div>
 
-            <table class="table data-sync--plan">
+        <div class="table--frame">
+            <table class="table table--hover data-sync--plan">
                 <thead>
                 <tr class="table--row">
-                    <th class="table--cell" scope="col">{{ '@page::column.operation' | trans }}</th>
-                    <th class="table--cell" scope="col">{{ '@page::column.local' | trans }}</th>
-                    <th class="table--cell" scope="col">{{ '@page::column.remote' | trans }}</th>
+                    <th class="table--cell table--cell--width-m" scope="col">{{ '@page::column.operation' | trans }}</th>
+                    <th class="table--cell table--cell--width-l" scope="col">{{ '@page::column.local' | trans }}</th>
+                    <th class="table--cell table--cell--fit" scope="col"><span class="visually-hidden">{{ '@page::column.direction' | trans }}</span></th>
+                    <th class="table--cell table--cell--width-l" scope="col">{{ '@page::column.remote' | trans }}</th>
                     <th class="table--cell" scope="col">{{ '@page::column.reason' | trans }}</th>
-                    <th class="table--cell" scope="col">{{ '@page::column.outcome' | trans }}</th>
-                    <th class="table--cell" scope="col"></th>
+                    <th class="table--cell table--cell--fit" scope="col"></th>
                 </tr>
                 </thead>
                 <tbody class="data-sync--relations"></tbody>
             </table>
-
-            <template class="data-sync--labels"
-                      data-empty="{{ '@page::empty' | trans }}"
-                      data-dry-run="{{ '@page::status.dry_run' | trans }}"
-                      data-applied="{{ '@page::status.applied' | trans }}"
-                      data-link="{{ '@page::action.link' | trans }}"
-                      data-keep-local="{{ '@page::action.keep_local' | trans }}"
-                      data-keep-remote="{{ '@page::action.keep_remote' | trans }}"
-                      data-diff="{{ '@page::action.diff' | trans }}"
-                      data-field="{{ '@page::diff.field' | trans }}"
-                      data-local="{{ '@page::diff.local' | trans }}"
-                      data-remote="{{ '@page::diff.remote' | trans }}"></template>
         </div>
+
+        <template class="data-sync--labels"
+                  data-empty="{{ '@page::empty' | trans }}"
+                  data-dry-run="{{ '@page::status.dry_run' | trans }}"
+                  data-applied="{{ '@page::status.applied' | trans }}"
+                  data-link="{{ '@page::action.link' | trans }}"
+                  data-keep-local="{{ '@page::action.keep_local' | trans }}"
+                  data-keep-remote="{{ '@page::action.keep_remote' | trans }}"
+                  data-diff="{{ '@page::action.diff' | trans }}"
+                  data-field="{{ '@page::diff.field' | trans }}"
+                  data-local="{{ '@page::diff.local' | trans }}"
+                  data-remote="{{ '@page::diff.remote' | trans }}"></template>
     </section>
 {%- endblock -%}

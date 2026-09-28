@@ -1,6 +1,7 @@
 import Page from '@wexample/symfony-loader/js/Class/Page';
 import RoutingService from '@wexample/symfony-loader/js/Services/RoutingService';
 import { unwrapApiEnvelope } from '@wexample/js-api-entity/Common/ApiEnvelope';
+import type ConfirmService from '@wexample/symfony-design-system/js/Services/ConfirmService';
 
 type Side = { id: string; fields: Record<string, unknown> } | null;
 
@@ -15,6 +16,7 @@ type Diff = {
 type Relation = {
   definition: string;
   operation: string;
+  side: 'local' | 'remote' | null;
   reason: string;
   outcome: string;
   message: string | null;
@@ -36,6 +38,9 @@ const ROUTE_RUN = 'api_data_sync_run';
 const OPERATION_CANDIDATE = 'candidate';
 const OPERATION_CONFLICT = 'conflict';
 const OPERATION_LOADING = 'loading';
+const COLUMNS = 6;
+// The fields a side is best known by, first found first shown.
+const NAME_FIELDS = ['name', 'display_name', 'displayName', 'title', 'label', 'username', 'email'];
 
 /**
  * Loads the definition's plan as a dry run, shows each relation with its field
@@ -50,10 +55,10 @@ export default class extends Page {
     this.definitionKey = root?.dataset.definition ?? '';
 
     this.el?.querySelector('.data-sync--refresh')?.addEventListener('click', () => void this.plan());
-    this.el?.querySelector<HTMLButtonElement>('.data-sync--apply')?.addEventListener('click', (event) => {
+    this.el?.querySelector<HTMLButtonElement>('.data-sync--apply')?.addEventListener('click', async (event) => {
       const button = event.currentTarget as HTMLButtonElement;
 
-      if (window.confirm(button.dataset.confirm ?? '')) {
+      if (await this.askConfirmation(button.dataset.confirm ?? '')) {
         void this.apply();
       }
     });
@@ -103,6 +108,7 @@ export default class extends Page {
       this.render(await this.request<Report>(route, method));
     } catch (error) {
       this.relationsBody().replaceChildren();
+      this.overview().replaceChildren();
       this.setStatus(this.errorMessage(error));
     } finally {
       this.setBusy(false);
@@ -124,40 +130,60 @@ export default class extends Page {
     const rows: HTMLElement[] = [];
 
     for (const relation of report.relations) {
-      rows.push(this.relationRow(relation));
+      const row = this.relationRow(relation);
+      rows.push(row);
 
       if (relation.diffs.length > 0) {
-        rows.push(this.diffRow(relation));
+        rows.push(this.diffRow(relation, row));
       }
     }
 
+    if (rows.length === 0) {
+      rows.push(this.fullRow(this.label('empty'), 'text-empty'));
+    }
+
     this.relationsBody().replaceChildren(...rows);
+    this.renderOverview(report.relations);
     this.setStatus(
       report.relations.length === 0
-        ? this.label('empty')
+        ? ''
         : this.label(report.dryRun ? 'dryRun' : 'applied')
     );
   }
 
   private renderLoading(): void {
-    const row = document.createElement('tr');
-    row.className = 'table--row';
-    row.append(this.cell(this.marker(OPERATION_LOADING)));
-    this.relationsBody().replaceChildren(row);
+    this.relationsBody().replaceChildren(this.fullRow(this.marker(OPERATION_LOADING)));
+    this.overview().replaceChildren(this.marker(OPERATION_LOADING));
     this.setStatus('');
+  }
+
+  // One marker per operation the plan holds, with how many: the plan at a
+  // glance before its rows.
+  private renderOverview(relations: Relation[]): void {
+    const counts = new Map<string, number>();
+
+    for (const relation of relations) {
+      counts.set(relation.operation, (counts.get(relation.operation) ?? 0) + 1);
+    }
+
+    this.overview().replaceChildren(...Array.from(counts, ([operation, count]) => this.marker(operation, count)));
   }
 
   private relationRow(relation: Relation): HTMLElement {
     const row = document.createElement('tr');
-    row.className = 'table--row';
+    row.className = `table--row data-sync--relation data-sync--relation--${relation.operation}`;
+
+    const reason = document.createElement('span');
+    reason.className = 'data-sync--reason';
+    reason.textContent = relation.reason + (relation.message ? ` — ${relation.message}` : '');
 
     row.append(
       this.cell(this.marker(relation.operation)),
-      this.cell(this.sideText(relation.local, relation.link?.localId)),
-      this.cell(this.sideText(relation.remote, relation.link?.remoteId)),
-      this.cell(relation.reason),
-      this.cell(relation.outcome + (relation.message ? `: ${relation.message}` : '')),
-      this.cell(this.actions(relation, row)),
+      this.cell(this.side(relation.local, relation.link?.localId)),
+      this.cell(this.direction(relation), 'table--cell--fit'),
+      this.cell(this.side(relation.remote, relation.link?.remoteId)),
+      this.cell(reason),
+      this.cell(this.actions(relation, row), 'table--cell--fit'),
     );
 
     return row;
@@ -165,98 +191,128 @@ export default class extends Page {
 
   private actions(relation: Relation, row: HTMLElement): Node {
     const container = document.createElement('span');
+    container.className = 'data-sync--row-actions';
 
     if (relation.operation === OPERATION_CANDIDATE && relation.local && relation.remote) {
       const localId = relation.local.id;
       const remoteId = relation.remote.id;
-      container.append(this.button(this.label('link'), () => void this.link(localId, remoteId)));
-    }
-
-    // A field conflict on a known pair; an ambiguous match has no diffs to settle.
-    if (relation.operation === OPERATION_CONFLICT && relation.local && relation.remote && relation.diffs.length > 0) {
-      const localId = relation.local.id;
-      container.append(
-        this.button(this.label('keepLocal'), () => void this.resolve(localId, 'local')),
-        this.button(this.label('keepRemote'), () => void this.resolve(localId, 'remote')),
-      );
+      container.append(this.button('link', this.label('link'), () => void this.link(localId, remoteId)));
     }
 
     if (relation.diffs.length > 0) {
-      container.append(this.button(this.label('diff'), () => {
+      const toggle = this.iconButton('diff', this.label('diff'), () => {
         const diffRow = row.nextElementSibling as HTMLElement | null;
 
         if (diffRow) {
           diffRow.hidden = !diffRow.hidden;
+          toggle.setAttribute('aria-expanded', String(!diffRow.hidden));
         }
-      }));
+      });
+      toggle.classList.add('data-sync--diff-toggle');
+      container.append(toggle);
     }
 
     return container;
   }
 
   /**
-   * The two panes: each differing field with its local value, the direction it
-   * will travel, and its remote value; the side that will be written is marked.
+   * The fields that differ, the two values facing each other across the way
+   * they will travel: the one overwritten struck, the one that wins in full.
+   * Open from the start where the visitor has a decision to take.
    */
-  private diffRow(relation: Relation): HTMLElement {
-    const table = document.createElement('table');
-    table.className = 'table data-sync--diff';
+  private diffRow(relation: Relation, relationRow: HTMLElement): HTMLElement {
+    const grid = document.createElement('div');
+    grid.className = 'data-sync--diff';
 
-    const head = document.createElement('tr');
-    head.className = 'table--row';
     for (const title of [this.label('field'), this.label('local'), '', this.label('remote')]) {
-      const th = document.createElement('th');
-      th.className = 'table--cell';
-      th.textContent = title;
-      head.append(th);
+      grid.append(this.span('data-sync--diff-head', title));
     }
-    table.append(head);
 
     for (const diff of relation.diffs) {
-      const line = document.createElement('tr');
-      line.className = 'table--row';
+      const local = this.span('data-sync--diff-value', this.valueText(diff.localValue));
+      const remote = this.span('data-sync--diff-value', this.valueText(diff.remoteValue));
+      local.classList.toggle('data-sync--diff-value--overwritten', diff.target === 'local');
+      local.classList.toggle('data-sync--diff-value--winning', diff.target === 'remote');
+      remote.classList.toggle('data-sync--diff-value--overwritten', diff.target === 'remote');
+      remote.classList.toggle('data-sync--diff-value--winning', diff.target === 'local');
 
-      const local = this.cell(this.valueText(diff.localValue));
-      const remote = this.cell(this.valueText(diff.remoteValue));
-      local.classList.toggle('is-written', diff.target === 'local');
-      remote.classList.toggle('is-written', diff.target === 'remote');
+      const arrow = this.span('data-sync--diff-arrow', '');
+      arrow.append(this.icon({ local: 'to-local', remote: 'to-remote', none: 'both' }[diff.target]));
 
-      const target = this.cell({ local: '←', remote: '→', none: '?' }[diff.target]);
-      target.classList.add('data-sync--target');
-
-      line.append(this.cell(`${diff.localField} / ${diff.remoteField}`), local, target, remote);
-      table.append(line);
+      const field = diff.localField === diff.remoteField ? diff.localField : `${diff.localField} · ${diff.remoteField}`;
+      grid.append(this.span('data-sync--diff-field', field), local, arrow, remote);
     }
 
-    const row = document.createElement('tr');
-    row.className = 'table--row';
-    row.hidden = true;
-    const cell = document.createElement('td');
-    cell.className = 'table--cell';
-    cell.colSpan = 6;
-    cell.append(table);
-    row.append(cell);
+    // A field conflict on a known pair is settled here, beside the values it
+    // chooses between; an ambiguous match has no diffs to settle.
+    if (relation.operation === OPERATION_CONFLICT && relation.local && relation.remote) {
+      const localId = relation.local.id;
+      const decisions = this.span('data-sync--diff-actions', '');
+      decisions.append(
+        this.button('keep-local', this.label('keepLocal'), () => void this.resolve(localId, 'local')),
+        this.button('keep-remote', this.label('keepRemote'), () => void this.resolve(localId, 'remote')),
+      );
+      grid.append(decisions);
+    }
+
+    const row = this.fullRow(grid);
+    row.classList.add('data-sync--diff-row');
+    row.hidden = relation.operation !== OPERATION_CONFLICT;
+    relationRow.querySelector('.data-sync--diff-toggle')?.setAttribute('aria-expanded', String(!row.hidden));
 
     return row;
   }
 
-  private marker(operation: string): Node {
-    const template = this.el?.querySelector<HTMLTemplateElement>(`.data-sync--marker[data-operation="${operation}"]`);
+  // The way the relation writes, pointing at the side that changes.
+  private direction(relation: Relation): Node {
+    const wrap = this.span('data-sync--direction', '');
+    const name = relation.side === 'local' ? 'to-local' : relation.side === 'remote' ? 'to-remote' : relation.local && relation.remote ? 'both' : 'none';
+    wrap.classList.toggle('data-sync--direction--active', relation.side !== null && relation.side !== undefined);
+    wrap.append(this.icon(name));
 
-    return template ? template.content.cloneNode(true) : document.createTextNode(operation);
+    return wrap;
   }
 
-  private sideText(side: Side, fallbackId?: string): string {
+  private side(side: Side, fallbackId?: string): Node {
+    const wrap = this.span('data-sync--side', '');
+
     if (!side) {
-      return fallbackId ?? '';
+      wrap.classList.add('data-sync--side--missing');
+      wrap.append(this.span('data-sync--side-id', fallbackId ?? '—'));
+
+      return wrap;
     }
 
-    const summary = Object.values(side.fields)
-      .filter((value) => typeof value === 'string' && value !== '')
-      .slice(0, 2)
-      .join(' · ');
+    const name = NAME_FIELDS.map((key) => side.fields[key]).find((value) => typeof value === 'string' && value !== '') as string | undefined;
+    wrap.append(this.span('data-sync--side-name', name ?? side.id));
 
-    return summary ? `${side.id} — ${summary}` : side.id;
+    if (name) {
+      wrap.append(this.span('data-sync--side-id', side.id));
+    }
+
+    return wrap;
+  }
+
+  private marker(operation: string, count?: number): Node {
+    const template = this.el?.querySelector<HTMLTemplateElement>(`.data-sync--marker[data-operation="${operation}"]`);
+
+    if (!template) {
+      return document.createTextNode(operation);
+    }
+
+    const fragment = template.content.cloneNode(true) as DocumentFragment;
+
+    if (count !== undefined) {
+      fragment.querySelector('.marker')?.append(this.span('marker--count', String(count)));
+    }
+
+    return fragment;
+  }
+
+  private icon(name: string): Node {
+    const template = this.el?.querySelector<HTMLTemplateElement>(`.data-sync--icon[data-name="${name}"]`);
+
+    return template ? template.content.cloneNode(true) : document.createTextNode('');
   }
 
   private valueText(value: unknown): string {
@@ -267,22 +323,81 @@ export default class extends Page {
     return typeof value === 'string' ? value : JSON.stringify(value);
   }
 
-  private cell(content: string | Node): HTMLTableCellElement {
+  private cell(content: string | Node, className?: string): HTMLTableCellElement {
     const cell = document.createElement('td');
-    cell.className = 'table--cell data-sync--cell-wrap';
+    cell.className = 'table--cell' + (className ? ` ${className}` : '');
     cell.append(content);
 
     return cell;
   }
 
-  private button(text: string, onClick: () => void): HTMLButtonElement {
+  private fullRow(content: string | Node, className?: string): HTMLElement {
+    const row = document.createElement('tr');
+    row.className = 'table--row';
+    const cell = this.cell(content, className);
+    cell.colSpan = COLUMNS;
+    row.append(cell);
+
+    return row;
+  }
+
+  private span(className: string, text: string): HTMLSpanElement {
+    const span = document.createElement('span');
+    span.className = className;
+    span.textContent = text;
+
+    return span;
+  }
+
+  // A decision: a button that says what it does.
+  private button(icon: string, text: string, onClick: () => void): HTMLButtonElement {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'button';
-    button.textContent = text;
+    const glyph = this.span('button--icon', '');
+    glyph.append(this.icon(icon));
+    button.append(glyph, this.span('', text));
     button.addEventListener('click', onClick);
 
     return button;
+  }
+
+  // Showing or hiding something: a round icon, its word in the tooltip.
+  private iconButton(icon: string, text: string, onClick: () => void): HTMLButtonElement {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'action-icon';
+    button.setAttribute('aria-label', text);
+    button.dataset.tooltip = text;
+    button.append(this.icon(icon));
+    button.addEventListener('click', onClick);
+
+    return button;
+  }
+
+  // The system's confirm where the app has one, the browser's otherwise.
+  private async askConfirmation(message: string): Promise<boolean> {
+    const root = this.el?.querySelector<HTMLElement>('.data-sync--definition');
+    const confirmService = (this.app.services as Record<string, unknown>).confirm as ConfirmService | undefined;
+
+    if (!confirmService) {
+      return window.confirm(message);
+    }
+
+    const result = await confirmService.confirm({
+      title: root?.dataset.applyTitle,
+      message,
+      actions: [
+        { key: 'y', value: 'ok', label: root?.dataset.applyAccept ?? 'Ok', role: 'primary' },
+        { key: 'n', value: 'cancel', label: root?.dataset.cancel ?? 'Cancel', role: 'secondary' },
+      ],
+    });
+
+    return result === 'ok';
+  }
+
+  private overview(): HTMLElement {
+    return this.el?.querySelector<HTMLElement>('.data-sync--overview') as HTMLElement;
   }
 
   private relationsBody(): HTMLElement {
@@ -294,10 +409,12 @@ export default class extends Page {
   }
 
   private setStatus(text: string): void {
-    const status = this.el?.querySelector('.data-sync--status');
+    const status = this.el?.querySelector<HTMLElement>('.data-sync--status');
+    const target = status?.querySelector('.data-sync--status-text');
 
-    if (status) {
-      status.textContent = text;
+    if (status && target) {
+      target.textContent = text;
+      status.hidden = text === '';
     }
   }
 

@@ -1,0 +1,18 @@
+// A class name: the class, and under it its namespace in a smaller grey mono,
+// broken at its separators when the room runs out.
+.data-sync--class {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.data-sync--class-name {
+  font-weight: var(--font-weight-strong);
+}
+
+.data-sync--class-namespace {
+  color: var(--text-color-muted);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-1);
+  overflow-wrap: anywhere;
+}

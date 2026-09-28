@@ -1,0 +1,7 @@
+{#- A class name read the way it is looked for: the class, and under it the
+    namespace it lives in, smaller and in grey — the whole of it in the tooltip. -#}
+{%- set parts = fqcn|split('\\') -%}
+<span class="data-sync--class" title="{{ fqcn }}">
+    <span class="data-sync--class-name">{{ parts|last }}</span>
+    {%- if parts|length > 1 %}<span class="data-sync--class-namespace">{{ parts|slice(0, parts|length - 1)|join('\\') }}</span>{% endif -%}
+</span>

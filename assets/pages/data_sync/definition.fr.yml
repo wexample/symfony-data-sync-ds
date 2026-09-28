@@ -7,12 +7,14 @@ summary:
   orphans: Orphelins (distants / locaux)
   conflict: Conflits
 column:
+  direction: Sens
   operation: Opération
   local: Local
   remote: Distant
   reason: Pourquoi
   outcome: Résultat
 action:
+  cancel: Annuler
   refresh: Replanifier
   apply: Appliquer le plan
   apply_confirm: Écrire tous les changements prévus, des deux côtés ?
