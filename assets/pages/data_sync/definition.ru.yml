@@ -1,0 +1,46 @@
+page_title: 'План синхронизации'
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'Ничего не нужно делать: обе стороны согласны.'
+summary:
+  local: 'Локальные сущности'
+  remote: 'Удаленный адаптер'
+  orphans: 'Сироты (удаленные / локальные)'
+  conflict: Конфликты
+column:
+  direction: Направление
+  operation: Операция
+  local: Локальный
+  remote: Удаленный
+  reason: Почему
+  outcome: Результат
+action:
+  cancel: Отмена
+  refresh: 'Запланировать снова'
+  apply: 'Применить план'
+  apply_confirm: 'Записать все запланированные изменения на обеих сторонах?'
+  link: Ссылка
+  keep_local: 'Сохранить локальный'
+  keep_remote: 'Сохранить удаленный'
+  diff: Поля
+diff:
+  field: Поле
+  local: 'Локальное значение'
+  remote: 'Удаленное значение'
+status:
+  dry_run: 'Тестовый запуск: ничего еще не записано.'
+  applied: 'План применен. Запланируйте снова, чтобы увидеть, что осталось.'
+operation:
+  loading: Планирование
+  local_link: Ссылка
+  local_create: 'Создать локально'
+  remote_create: 'Создать удаленно'
+  local_update: Обновить
+  remote_update: 'Обновить удаленно'
+  local_unlink: 'Отменить ссылку'
+  remote_disable: 'Отключить удаленно'
+  remote_remove: 'Удалить удаленно'
+  candidate: Кандидат
+  conflict: Конфликт
+  unmatched: Несоответствие
+  postponed: Отложено
+  up_to_date: Актуально

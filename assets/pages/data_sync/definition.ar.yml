@@ -1,0 +1,46 @@
+page_title: 'خطة المزامنة'
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'لا يوجد شيء للقيام به: كلا الجانبين متفقين.'
+summary:
+  local: 'الكيانات المحلية'
+  remote: 'المحول البعيد'
+  orphans: 'الأيتام (بعيد / محلي)'
+  conflict: التعارضات
+column:
+  direction: الاتجاه
+  operation: العملية
+  local: محلي
+  remote: بعيد
+  reason: لماذا
+  outcome: النتيجة
+action:
+  cancel: إلغاء
+  refresh: 'خطط مرة أخرى'
+  apply: 'تطبيق الخطة'
+  apply_confirm: 'هل تريد كتابة كل التغييرات المخطط لها على كلا الجانبين؟'
+  link: رابط
+  keep_local: 'احتفظ بالمحلي'
+  keep_remote: 'احتفظ بالبعيد'
+  diff: الحقول
+diff:
+  field: الحقل
+  local: 'القيمة المحلية'
+  remote: 'القيمة البعيدة'
+status:
+  dry_run: 'تشغيل تجريبي: لم يتم كتابة أي شيء بعد.'
+  applied: 'تم تطبيق الخطة. خطط مرة أخرى لرؤية ما تبقى.'
+operation:
+  loading: التخطيط
+  local_link: 'رابط محلي'
+  local_create: 'إنشاء محلي'
+  remote_create: 'إنشاء بعيد'
+  local_update: 'تحديث محلي'
+  remote_update: 'تحديث بعيد'
+  local_unlink: 'فك الارتباط'
+  remote_disable: 'تعطيل عن بعد'
+  remote_remove: 'إزالة عن بعد'
+  candidate: مرشح
+  conflict: تعارض
+  unmatched: 'غير مطابق'
+  postponed: مؤجل
+  up_to_date: محدث

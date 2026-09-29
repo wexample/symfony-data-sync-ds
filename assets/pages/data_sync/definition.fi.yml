@@ -1,0 +1,46 @@
+page_title: Synkronointisuunnitelma
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'Ei mitään tehtävää: molemmat osapuolet ovat samaa mieltä.'
+summary:
+  local: 'Paikalliset entiteetit'
+  remote: Etäadapteri
+  orphans: 'Orvot (etä / paikallinen)'
+  conflict: Konfliktit
+column:
+  direction: Suunta
+  operation: Toiminto
+  local: Paikallinen
+  remote: Etäinen
+  reason: Miksi
+  outcome: Tulos
+action:
+  cancel: Peruuta
+  refresh: 'Suunnittele uudelleen'
+  apply: 'Hyväksy suunnitelma'
+  apply_confirm: 'Kirjoitetaanko kaikki suunnitellut muutokset molemmille puolille?'
+  link: Linkitä
+  keep_local: 'Pidä paikallinen'
+  keep_remote: 'Pidä etäinen'
+  diff: Kentät
+diff:
+  field: Kenttä
+  local: 'Paikallinen arvo'
+  remote: 'Etäinen arvo'
+status:
+  dry_run: 'Kuivaharjoitus: ei vielä mitään kirjoitettu.'
+  applied: 'Suunnitelma hyväksytty. Suunnittele uudelleen nähdäksesi, mitä on jäljellä.'
+operation:
+  loading: Suunnittelu
+  local_link: Linkitä
+  local_create: 'Luo paikallisesti'
+  remote_create: 'Luo etänä'
+  local_update: Päivitä
+  remote_update: 'Päivitä etänä'
+  local_unlink: 'Poista linkki'
+  remote_disable: 'Poista käytöstä etänä'
+  remote_remove: 'Poista etänä'
+  candidate: Ehdokas
+  conflict: Konflikti
+  unmatched: Vastaamaton
+  postponed: Siirretty
+  up_to_date: Ajantasainen

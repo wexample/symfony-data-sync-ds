@@ -1,0 +1,8 @@
+page_title: データ同期
+page_icon: 'ph:bold/arrows-clockwise'
+empty: このアプリケーションでは同期定義が宣言されていません。
+column:
+  definition: 定義
+  local: ローカルエンティティ
+  remote: リモートアダプタ
+open: プランを確認する

@@ -1,0 +1,46 @@
+page_title: 'برنامه همگام‌سازی'
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'هیچ کاری وجود ندارد: هر دو طرف توافق دارند.'
+summary:
+  local: 'موجودیت‌های محلی'
+  remote: 'آداپتور از راه دور'
+  orphans: 'بی‌سرپرست‌ها (از راه دور / محلی)'
+  conflict: تعارضات
+column:
+  direction: جهت
+  operation: عملیات
+  local: محلی
+  remote: 'از راه دور'
+  reason: چرا
+  outcome: نتیجه
+action:
+  cancel: لغو
+  refresh: 'برنامه‌ریزی مجدد'
+  apply: 'اعمال برنامه'
+  apply_confirm: 'آیا می‌خواهید تمام تغییرات برنامه‌ریزی شده را در هر دو طرف بنویسید؟'
+  link: پیوند
+  keep_local: 'محلی را نگه‌دار'
+  keep_remote: 'از راه دور را نگه‌دار'
+  diff: فیلدها
+diff:
+  field: فیلد
+  local: 'مقدار محلی'
+  remote: 'مقدار از راه دور'
+status:
+  dry_run: 'اجرای آزمایشی: هنوز چیزی نوشته نشده است.'
+  applied: 'برنامه اعمال شد. برای دیدن آنچه باقی مانده، دوباره برنامه‌ریزی کنید.'
+operation:
+  loading: 'برنامه‌ریزی در حال انجام'
+  local_link: پیوند
+  local_create: 'ایجاد به صورت محلی'
+  remote_create: 'ایجاد به صورت از راه دور'
+  local_update: به‌روزرسانی
+  remote_update: 'به‌روزرسانی از راه دور'
+  local_unlink: 'حذف پیوند'
+  remote_disable: 'غیرفعال‌سازی از راه دور'
+  remote_remove: 'حذف از راه دور'
+  candidate: نامزد
+  conflict: تعارض
+  unmatched: 'عدم تطابق'
+  postponed: 'به تعویق افتاده'
+  up_to_date: به‌روز

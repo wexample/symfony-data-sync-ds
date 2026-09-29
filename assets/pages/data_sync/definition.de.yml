@@ -1,0 +1,46 @@
+page_title: Synchronisationsplan
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'Nichts zu tun: beide Seiten stimmen überein.'
+summary:
+  local: 'Lokale Entitäten'
+  remote: Remote-Adapter
+  orphans: 'Waisen (remote / lokal)'
+  conflict: Konflikte
+column:
+  direction: Richtung
+  operation: Operation
+  local: Lokal
+  remote: Remote
+  reason: Warum
+  outcome: Ergebnis
+action:
+  cancel: Abbrechen
+  refresh: 'Plan erneut erstellen'
+  apply: 'Plan anwenden'
+  apply_confirm: 'Alle geplanten Änderungen auf beiden Seiten schreiben?'
+  link: Verknüpfen
+  keep_local: 'Lokal behalten'
+  keep_remote: 'Remote behalten'
+  diff: Felder
+diff:
+  field: Feld
+  local: 'Lokaler Wert'
+  remote: Remote-Wert
+status:
+  dry_run: 'Trockenlauf: noch nichts geschrieben.'
+  applied: 'Plan angewendet. Plan erneut erstellen, um zu sehen, was übrig bleibt.'
+operation:
+  loading: Planung
+  local_link: 'Lokal verknüpfen'
+  local_create: 'Lokal erstellen'
+  remote_create: 'Remote erstellen'
+  local_update: Aktualisieren
+  remote_update: 'Remote aktualisieren'
+  local_unlink: 'Verknüpfung aufheben'
+  remote_disable: 'Remote deaktivieren'
+  remote_remove: 'Remote entfernen'
+  candidate: Kandidat
+  conflict: Konflikt
+  unmatched: 'Nicht übereinstimmend'
+  postponed: Verschoben
+  up_to_date: Aktuell

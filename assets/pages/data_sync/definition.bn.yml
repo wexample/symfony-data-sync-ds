@@ -1,0 +1,46 @@
+page_title: 'সিঙ্ক পরিকল্পনা'
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'কিছু নেই: উভয় পক্ষ একমত।'
+summary:
+  local: 'স্থানীয় একক'
+  remote: 'দূরবর্তী অ্যাডাপ্টার'
+  orphans: 'অরফান (দূরবর্তী / স্থানীয়)'
+  conflict: সংঘাত
+column:
+  direction: দিক
+  operation: কার্যকলাপ
+  local: স্থানীয়
+  remote: দূরবর্তী
+  reason: কেন
+  outcome: ফলাফল
+action:
+  cancel: 'বাতিল করুন'
+  refresh: 'পুনরায় পরিকল্পনা করুন'
+  apply: 'পরিকল্পনা প্রয়োগ করুন'
+  apply_confirm: 'দুই পক্ষের প্রতিটি পরিকল্পিত পরিবর্তন লিখবেন?'
+  link: লিঙ্ক
+  keep_local: 'স্থানীয় রাখুন'
+  keep_remote: 'দূরবর্তী রাখুন'
+  diff: ফিল্ড
+diff:
+  field: ফিল্ড
+  local: 'স্থানীয় মান'
+  remote: 'দূরবর্তী মান'
+status:
+  dry_run: 'শুকনো রান: এখনও কিছু লেখা হয়নি।'
+  applied: 'পরিকল্পনা প্রয়োগ করা হয়েছে। কী বাকি তা দেখতে পুনরায় পরিকল্পনা করুন।'
+operation:
+  loading: 'পরিকল্পনা করা হচ্ছে'
+  local_link: লিঙ্ক
+  local_create: 'স্থানীয়ভাবে তৈরি করুন'
+  remote_create: 'দূরবর্তীভাবে তৈরি করুন'
+  local_update: আপডেট
+  remote_update: 'দূরবর্তীভাবে আপডেট করুন'
+  local_unlink: আনলিঙ্ক
+  remote_disable: 'দূরবর্তীভাবে নিষ্ক্রিয় করুন'
+  remote_remove: 'দূরবর্তীভাবে সরান'
+  candidate: প্রার্থী
+  conflict: সংঘাত
+  unmatched: অমিল
+  postponed: পুনঃনির্ধারিত
+  up_to_date: 'সর্বশেষ আপডেট'

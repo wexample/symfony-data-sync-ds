@@ -1,0 +1,8 @@
+page_title: 'סנכרון נתונים'
+page_icon: 'ph:bold/arrows-clockwise'
+empty: 'לא הוגדרה הגדרת סנכרון באפליקציה זו.'
+column:
+  definition: הגדרה
+  local: 'יישויות מקומיות'
+  remote: 'מתאם מרוחק'
+open: 'סקור את התוכנית'

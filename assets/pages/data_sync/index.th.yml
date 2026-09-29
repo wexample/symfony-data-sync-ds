@@ -1,0 +1,8 @@
+page_title: การซิงค์ข้อมูล
+page_icon: 'ph:bold/arrows-clockwise'
+empty: ไม่มีการกำหนดการซิงค์ในแอปพลิเคชันนี้
+column:
+  definition: การกำหนด
+  local: หน่วยงานในท้องถิ่น
+  remote: อะแดปเตอร์ระยะไกล
+open: ตรวจสอบแผน

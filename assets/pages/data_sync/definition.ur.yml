@@ -1,0 +1,46 @@
+page_title: 'ہم آہنگی کا منصوبہ'
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'کچھ نہیں کرنا: دونوں طرفوں کی رضا مندی ہے۔'
+summary:
+  local: 'مقامی عناصر'
+  remote: 'دور دراز کا ایڈاپٹر'
+  orphans: 'یتیم (دور دراز / مقامی)'
+  conflict: تنازعات
+column:
+  direction: سمت
+  operation: عمل
+  local: مقامی
+  remote: 'دور دراز'
+  reason: کیوں
+  outcome: نتیجہ
+action:
+  cancel: 'منسوخ کریں'
+  refresh: 'پھر سے منصوبہ بنائیں'
+  apply: 'منصوبے کو نافذ کریں'
+  apply_confirm: 'کیا دونوں طرف ہر منصوبہ بند تبدیلی لکھیں؟'
+  link: 'لنک کریں'
+  keep_local: 'مقامی رکھیں'
+  keep_remote: 'دور دراز رکھیں'
+  diff: فیلڈز
+diff:
+  field: فیلڈ
+  local: 'مقامی قیمت'
+  remote: 'دور دراز قیمت'
+status:
+  dry_run: 'خشک چلائیں: ابھی تک کچھ نہیں لکھا گیا۔'
+  applied: 'منصوبہ نافذ کیا گیا۔ باقی دیکھنے کے لیے دوبارہ منصوبہ بنائیں۔'
+operation:
+  loading: 'منصوبہ بندی'
+  local_link: 'لنک بنائیں'
+  local_create: 'مقامی طور پر بنائیں'
+  remote_create: 'دور دراز بنائیں'
+  local_update: 'اپ ڈیٹ کریں'
+  remote_update: 'دور دراز اپ ڈیٹ کریں'
+  local_unlink: 'لنک ختم کریں'
+  remote_disable: 'دور دراز غیر فعال کریں'
+  remote_remove: 'دور دراز ہٹا دیں'
+  candidate: امیدوار
+  conflict: تنازعہ
+  unmatched: 'میچ نہیں ہوا'
+  postponed: 'موخر کر دیا گیا'
+  up_to_date: 'اپ ڈیٹ'

@@ -1,0 +1,46 @@
+page_title: 同期プラン
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'やることはありません: 両方の側が合意しています。'
+summary:
+  local: ローカルエンティティ
+  remote: リモートアダプタ
+  orphans: 孤立したもの（リモート／ローカル）
+  conflict: コンフリクト
+column:
+  direction: 方向
+  operation: 操作
+  local: ローカル
+  remote: リモート
+  reason: 理由
+  outcome: 結果
+action:
+  cancel: キャンセル
+  refresh: 再計画
+  apply: プランを適用
+  apply_confirm: 両方の側にすべての計画された変更を書き込みますか？
+  link: リンク
+  keep_local: ローカルを保持
+  keep_remote: リモートを保持
+  diff: フィールド
+diff:
+  field: フィールド
+  local: ローカル値
+  remote: リモート値
+status:
+  dry_run: 'ドライラン: まだ何も書き込まれていません。'
+  applied: プランが適用されました。残りを確認するために再計画してください。
+operation:
+  loading: 計画中
+  local_link: ローカルリンク
+  local_create: ローカルに作成
+  remote_create: リモートに作成
+  local_update: 更新
+  remote_update: リモートで更新
+  local_unlink: リンク解除
+  remote_disable: リモートで無効
+  remote_remove: リモートで削除
+  candidate: 候補
+  conflict: コンフリクト
+  unmatched: 一致しない
+  postponed: 保留
+  up_to_date: 最新の状態

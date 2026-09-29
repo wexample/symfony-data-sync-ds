@@ -1,0 +1,8 @@
+page_title: 'ডেটা সিঙ্ক'
+page_icon: 'ph:bold/arrows-clockwise'
+empty: 'এই অ্যাপে কোনও সিঙ্ক সংজ্ঞা ঘোষণা করা হয়নি।'
+column:
+  definition: সংজ্ঞা
+  local: 'স্থানীয় সত্তা'
+  remote: 'দূরবর্তী অ্যাডাপ্টার'
+open: 'পরিকল্পনা পর্যালোচনা করুন'

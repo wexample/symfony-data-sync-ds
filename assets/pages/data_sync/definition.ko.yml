@@ -1,0 +1,46 @@
+page_title: '동기화 계획'
+page_icon: 'ph:bold/arrows-left-right'
+empty: '할 일이 없습니다: 양쪽 모두 동의합니다.'
+summary:
+  local: '로컬 엔티티'
+  remote: '원격 어댑터'
+  orphans: '고아 (원격 / 로컬)'
+  conflict: 충돌
+column:
+  direction: 방향
+  operation: 작업
+  local: 로컬
+  remote: 원격
+  reason: 이유
+  outcome: 결과
+action:
+  cancel: 취소
+  refresh: '다시 계획하기'
+  apply: '계획 적용하기'
+  apply_confirm: '양쪽 모두에 계획된 변경사항을 기록하시겠습니까?'
+  link: 링크
+  keep_local: '로컬 유지'
+  keep_remote: '원격 유지'
+  diff: 필드
+diff:
+  field: 필드
+  local: '로컬 값'
+  remote: '원격 값'
+status:
+  dry_run: '드라이 런: 아직 작성되지 않았습니다.'
+  applied: '계획이 적용되었습니다. 남은 사항을 보려면 다시 계획하세요.'
+operation:
+  loading: '계획 중'
+  local_link: '로컬 링크'
+  local_create: '로컬에서 생성'
+  remote_create: '원격에서 생성'
+  local_update: 업데이트
+  remote_update: '원격 업데이트'
+  local_unlink: '링크 해제'
+  remote_disable: '원격 비활성화'
+  remote_remove: '원격 제거'
+  candidate: 후보
+  conflict: 충돌
+  unmatched: '일치하지 않음'
+  postponed: 연기됨
+  up_to_date: '최신 상태'

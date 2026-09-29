@@ -1,0 +1,46 @@
+page_title: 'תוכנית סנכרון'
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'אין מה לעשות: שני הצדדים מסכימים.'
+summary:
+  local: 'יישויות מקומיות'
+  remote: 'מתאם מרוחק'
+  orphans: 'יתומים (מרוחק / מקומי)'
+  conflict: סכסוכים
+column:
+  direction: כיוון
+  operation: פעולה
+  local: מקומי
+  remote: מרוחק
+  reason: למה
+  outcome: תוצאה
+action:
+  cancel: בטל
+  refresh: 'תכנן שוב'
+  apply: 'החל את התוכנית'
+  apply_confirm: 'לכתוב כל שינוי מתוכנן בשני הצדדים?'
+  link: קשר
+  keep_local: 'שמור מקומי'
+  keep_remote: 'שמור מרוחק'
+  diff: שדות
+diff:
+  field: שדה
+  local: 'ערך מקומי'
+  remote: 'ערך מרוחק'
+status:
+  dry_run: 'הרצה יבשה: עדיין לא נכתבה שום דבר.'
+  applied: 'התוכנית הוחלה. תכנן שוב כדי לראות מה נשאר.'
+operation:
+  loading: מתכנן
+  local_link: קשר
+  local_create: 'צור מקומית'
+  remote_create: 'צור מרוחק'
+  local_update: עדכן
+  remote_update: 'עדכן מרוחק'
+  local_unlink: 'הסר קשר'
+  remote_disable: 'כבוש מרוחק'
+  remote_remove: 'הסר מרוחק'
+  candidate: מועמד
+  conflict: סכסוך
+  unmatched: 'לא תואם'
+  postponed: נדחה
+  up_to_date: מעודכן
