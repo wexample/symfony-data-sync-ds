@@ -1,0 +1,46 @@
+page_title: 'सिंक योजना'
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'कुछ करने को नहीं: दोनों पक्ष सहमत हैं।'
+summary:
+  local: 'स्थानीय संस्थाएँ'
+  remote: 'दूरस्थ एडेप्टर'
+  orphans: 'अनाथ (दूरस्थ / स्थानीय)'
+  conflict: संघर्ष
+column:
+  direction: दिशा
+  operation: संचालन
+  local: स्थानीय
+  remote: दूरस्थ
+  reason: क्यों
+  outcome: परिणाम
+action:
+  cancel: 'रद्द करें'
+  refresh: 'फिर से योजना बनाएं'
+  apply: 'योजना लागू करें'
+  apply_confirm: 'क्या दोनों पक्षों पर प्रत्येक योजनाबद्ध परिवर्तन लिखें?'
+  link: लिंक
+  keep_local: 'स्थानीय रखें'
+  keep_remote: 'दूरस्थ रखें'
+  diff: क्षेत्र
+diff:
+  field: क्षेत्र
+  local: 'स्थानीय मान'
+  remote: 'दूरस्थ मान'
+status:
+  dry_run: 'सूखा चलाना: अभी तक कुछ नहीं लिखा गया।'
+  applied: 'योजना लागू की गई। देखिए कि क्या बचा है, फिर से योजना बनाएं।'
+operation:
+  loading: 'योजना बनाना'
+  local_link: लिंक
+  local_create: 'स्थानीय रूप से बनाएं'
+  remote_create: 'दूरस्थ रूप से बनाएं'
+  local_update: 'अपडेट करें'
+  remote_update: 'दूरस्थ रूप से अपडेट करें'
+  local_unlink: 'अनलिंक करें'
+  remote_disable: 'दूरस्थ रूप से निष्क्रिय करें'
+  remote_remove: 'दूरस्थ रूप से हटा दें'
+  candidate: उम्मीदवार
+  conflict: संघर्ष
+  unmatched: असंगत
+  postponed: 'टाल दिया गया'
+  up_to_date: अपडेटेड

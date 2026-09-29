@@ -1,0 +1,8 @@
+page_title: 'डेटा समन्वय'
+page_icon: 'ph:bold/arrows-clockwise'
+empty: 'इस अनुप्रयोग में कोई समन्वय परिभाषा घोषित नहीं है।'
+column:
+  definition: परिभाषा
+  local: 'स्थानीय संस्थाएँ'
+  remote: 'दूरस्थ अडाप्टर'
+open: 'योजना की समीक्षा करें'
