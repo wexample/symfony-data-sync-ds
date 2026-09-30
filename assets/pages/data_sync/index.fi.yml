@@ -1,8 +1,0 @@
-page_title: Tietosynkronointi
-page_icon: 'ph:bold/arrows-clockwise'
-empty: 'Tässä sovelluksessa ei ole määritelty synkronointia.'
-column:
-  definition: Määritelmä
-  local: 'Paikalliset entiteetit'
-  remote: Etäadapteri
-open: 'Tarkista suunnitelma'

@@ -1,8 +1,0 @@
-page_title: 'Synchronizacja danych'
-page_icon: 'ph:bold/arrows-clockwise'
-empty: 'Nie zdefiniowano definicji synchronizacji w tej aplikacji.'
-column:
-  definition: Definicja
-  local: 'Lokalne jednostki'
-  remote: 'Zdalny adapter'
-open: 'Przejrzyj plan'

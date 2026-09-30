@@ -1,8 +1,0 @@
-page_title: 'Sincronización de datos'
-page_icon: 'ph:bold/arrows-clockwise'
-empty: 'No se ha declarado ninguna definición de sincronización en esta aplicación.'
-column:
-  definition: Definición
-  local: 'Entidades locales'
-  remote: 'Adaptador remoto'
-open: 'Revisar el plan'

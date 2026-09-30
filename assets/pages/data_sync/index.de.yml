@@ -1,8 +1,0 @@
-page_title: 'Daten synchronisieren'
-page_icon: 'ph:bold/arrows-clockwise'
-empty: 'Es ist keine Synchronisierungsdefinition in dieser Anwendung festgelegt.'
-column:
-  definition: Definition
-  local: 'Lokale Entitäten'
-  remote: 'Entfernte Adapter'
-open: 'Plan überprüfen'

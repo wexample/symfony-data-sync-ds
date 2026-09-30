@@ -1,0 +1,1103 @@
+en:
+  page_title: Sync plan
+  page_icon: ph:bold/arrows-left-right
+  empty: "Nothing to do: both sides agree."
+  summary:
+    local: Local entities
+    remote: Remote adapter
+    orphans: Orphans (remote / local)
+    conflict: Conflicts
+  column:
+    direction: Direction
+    operation: Operation
+    local: Local
+    remote: Remote
+    reason: Why
+    outcome: Outcome
+  action:
+    cancel: Cancel
+    refresh: Plan again
+    apply: Apply the plan
+    apply_confirm: Write every planned change on both sides?
+    link: Link
+    keep_local: Keep local
+    keep_remote: Keep remote
+    diff: Fields
+  diff:
+    field: Field
+    local: Local value
+    remote: Remote value
+  status:
+    dry_run: "Dry run: nothing written yet."
+    applied: Plan applied. Plan again to see what is left.
+  operation:
+    loading: Planning
+    local_link: Link
+    local_create: Create locally
+    remote_create: Create remotely
+    local_update: Update
+    remote_update: Update remotely
+    local_unlink: Unlink
+    remote_disable: Disable remotely
+    remote_remove: Remove remotely
+    candidate: Candidate
+    conflict: Conflict
+    unmatched: Unmatched
+    postponed: Postponed
+    up_to_date: Up to date
+
+ar:
+  page_title: 'خطة المزامنة'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'لا يوجد شيء للقيام به: كلا الجانبين متفقين.'
+  summary:
+    local: 'الكيانات المحلية'
+    remote: 'المحول البعيد'
+    orphans: 'الأيتام (بعيد / محلي)'
+    conflict: التعارضات
+  column:
+    direction: الاتجاه
+    operation: العملية
+    local: محلي
+    remote: بعيد
+    reason: لماذا
+    outcome: النتيجة
+  action:
+    cancel: إلغاء
+    refresh: 'خطط مرة أخرى'
+    apply: 'تطبيق الخطة'
+    apply_confirm: 'هل تريد كتابة كل التغييرات المخطط لها على كلا الجانبين؟'
+    link: رابط
+    keep_local: 'احتفظ بالمحلي'
+    keep_remote: 'احتفظ بالبعيد'
+    diff: الحقول
+  diff:
+    field: الحقل
+    local: 'القيمة المحلية'
+    remote: 'القيمة البعيدة'
+  status:
+    dry_run: 'تشغيل تجريبي: لم يتم كتابة أي شيء بعد.'
+    applied: 'تم تطبيق الخطة. خطط مرة أخرى لرؤية ما تبقى.'
+  operation:
+    loading: التخطيط
+    local_link: 'رابط محلي'
+    local_create: 'إنشاء محلي'
+    remote_create: 'إنشاء بعيد'
+    local_update: 'تحديث محلي'
+    remote_update: 'تحديث بعيد'
+    local_unlink: 'فك الارتباط'
+    remote_disable: 'تعطيل عن بعد'
+    remote_remove: 'إزالة عن بعد'
+    candidate: مرشح
+    conflict: تعارض
+    unmatched: 'غير مطابق'
+    postponed: مؤجل
+    up_to_date: محدث
+
+bn:
+  page_title: 'সিঙ্ক পরিকল্পনা'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'কিছু নেই: উভয় পক্ষ একমত।'
+  summary:
+    local: 'স্থানীয় একক'
+    remote: 'দূরবর্তী অ্যাডাপ্টার'
+    orphans: 'অরফান (দূরবর্তী / স্থানীয়)'
+    conflict: সংঘাত
+  column:
+    direction: দিক
+    operation: কার্যকলাপ
+    local: স্থানীয়
+    remote: দূরবর্তী
+    reason: কেন
+    outcome: ফলাফল
+  action:
+    cancel: 'বাতিল করুন'
+    refresh: 'পুনরায় পরিকল্পনা করুন'
+    apply: 'পরিকল্পনা প্রয়োগ করুন'
+    apply_confirm: 'দুই পক্ষের প্রতিটি পরিকল্পিত পরিবর্তন লিখবেন?'
+    link: লিঙ্ক
+    keep_local: 'স্থানীয় রাখুন'
+    keep_remote: 'দূরবর্তী রাখুন'
+    diff: ফিল্ড
+  diff:
+    field: ফিল্ড
+    local: 'স্থানীয় মান'
+    remote: 'দূরবর্তী মান'
+  status:
+    dry_run: 'শুকনো রান: এখনও কিছু লেখা হয়নি।'
+    applied: 'পরিকল্পনা প্রয়োগ করা হয়েছে। কী বাকি তা দেখতে পুনরায় পরিকল্পনা করুন।'
+  operation:
+    loading: 'পরিকল্পনা করা হচ্ছে'
+    local_link: লিঙ্ক
+    local_create: 'স্থানীয়ভাবে তৈরি করুন'
+    remote_create: 'দূরবর্তীভাবে তৈরি করুন'
+    local_update: আপডেট
+    remote_update: 'দূরবর্তীভাবে আপডেট করুন'
+    local_unlink: আনলিঙ্ক
+    remote_disable: 'দূরবর্তীভাবে নিষ্ক্রিয় করুন'
+    remote_remove: 'দূরবর্তীভাবে সরান'
+    candidate: প্রার্থী
+    conflict: সংঘাত
+    unmatched: অমিল
+    postponed: পুনঃনির্ধারিত
+    up_to_date: 'সর্বশেষ আপডেট'
+
+de:
+  page_title: Synchronisationsplan
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'Nichts zu tun: beide Seiten stimmen überein.'
+  summary:
+    local: 'Lokale Entitäten'
+    remote: Remote-Adapter
+    orphans: 'Waisen (remote / lokal)'
+    conflict: Konflikte
+  column:
+    direction: Richtung
+    operation: Operation
+    local: Lokal
+    remote: Remote
+    reason: Warum
+    outcome: Ergebnis
+  action:
+    cancel: Abbrechen
+    refresh: 'Plan erneut erstellen'
+    apply: 'Plan anwenden'
+    apply_confirm: 'Alle geplanten Änderungen auf beiden Seiten schreiben?'
+    link: Verknüpfen
+    keep_local: 'Lokal behalten'
+    keep_remote: 'Remote behalten'
+    diff: Felder
+  diff:
+    field: Feld
+    local: 'Lokaler Wert'
+    remote: Remote-Wert
+  status:
+    dry_run: 'Trockenlauf: noch nichts geschrieben.'
+    applied: 'Plan angewendet. Plan erneut erstellen, um zu sehen, was übrig bleibt.'
+  operation:
+    loading: Planung
+    local_link: 'Lokal verknüpfen'
+    local_create: 'Lokal erstellen'
+    remote_create: 'Remote erstellen'
+    local_update: Aktualisieren
+    remote_update: 'Remote aktualisieren'
+    local_unlink: 'Verknüpfung aufheben'
+    remote_disable: 'Remote deaktivieren'
+    remote_remove: 'Remote entfernen'
+    candidate: Kandidat
+    conflict: Konflikt
+    unmatched: 'Nicht übereinstimmend'
+    postponed: Verschoben
+    up_to_date: Aktuell
+
+es:
+  page_title: 'Plan de sincronización'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'Nada que hacer: ambos lados están de acuerdo.'
+  summary:
+    local: 'Entidades locales'
+    remote: 'Adaptador remoto'
+    orphans: 'Huérfanos (remoto / local)'
+    conflict: Conflictos
+  column:
+    direction: Dirección
+    operation: Operación
+    local: Local
+    remote: Remoto
+    reason: 'Por qué'
+    outcome: Resultado
+  action:
+    cancel: Cancelar
+    refresh: 'Planificar de nuevo'
+    apply: 'Aplicar el plan'
+    apply_confirm: '¿Escribir cada cambio planeado en ambos lados?'
+    link: Vincular
+    keep_local: 'Mantener local'
+    keep_remote: 'Mantener remoto'
+    diff: Campos
+  diff:
+    field: Campo
+    local: 'Valor local'
+    remote: 'Valor remoto'
+  status:
+    dry_run: 'Ejecución en seco: nada escrito aún.'
+    applied: 'Plan aplicado. Planifica de nuevo para ver lo que queda.'
+  operation:
+    loading: Planificando
+    local_link: Vincular
+    local_create: 'Crear localmente'
+    remote_create: 'Crear remotamente'
+    local_update: Actualizar
+    remote_update: 'Actualizar remotamente'
+    local_unlink: Desvincular
+    remote_disable: 'Deshabilitar remotamente'
+    remote_remove: 'Eliminar remotamente'
+    candidate: Candidato
+    conflict: Conflicto
+    unmatched: 'No coincidente'
+    postponed: Pospuesto
+    up_to_date: Actualizado
+
+fa:
+  page_title: 'برنامه همگام‌سازی'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'هیچ کاری وجود ندارد: هر دو طرف توافق دارند.'
+  summary:
+    local: 'موجودیت‌های محلی'
+    remote: 'آداپتور از راه دور'
+    orphans: 'بی‌سرپرست‌ها (از راه دور / محلی)'
+    conflict: تعارضات
+  column:
+    direction: جهت
+    operation: عملیات
+    local: محلی
+    remote: 'از راه دور'
+    reason: چرا
+    outcome: نتیجه
+  action:
+    cancel: لغو
+    refresh: 'برنامه‌ریزی مجدد'
+    apply: 'اعمال برنامه'
+    apply_confirm: 'آیا می‌خواهید تمام تغییرات برنامه‌ریزی شده را در هر دو طرف بنویسید؟'
+    link: پیوند
+    keep_local: 'محلی را نگه‌دار'
+    keep_remote: 'از راه دور را نگه‌دار'
+    diff: فیلدها
+  diff:
+    field: فیلد
+    local: 'مقدار محلی'
+    remote: 'مقدار از راه دور'
+  status:
+    dry_run: 'اجرای آزمایشی: هنوز چیزی نوشته نشده است.'
+    applied: 'برنامه اعمال شد. برای دیدن آنچه باقی مانده، دوباره برنامه‌ریزی کنید.'
+  operation:
+    loading: 'برنامه‌ریزی در حال انجام'
+    local_link: پیوند
+    local_create: 'ایجاد به صورت محلی'
+    remote_create: 'ایجاد به صورت از راه دور'
+    local_update: به‌روزرسانی
+    remote_update: 'به‌روزرسانی از راه دور'
+    local_unlink: 'حذف پیوند'
+    remote_disable: 'غیرفعال‌سازی از راه دور'
+    remote_remove: 'حذف از راه دور'
+    candidate: نامزد
+    conflict: تعارض
+    unmatched: 'عدم تطابق'
+    postponed: 'به تعویق افتاده'
+    up_to_date: به‌روز
+
+fi:
+  page_title: Synkronointisuunnitelma
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'Ei mitään tehtävää: molemmat osapuolet ovat samaa mieltä.'
+  summary:
+    local: 'Paikalliset entiteetit'
+    remote: Etäadapteri
+    orphans: 'Orvot (etä / paikallinen)'
+    conflict: Konfliktit
+  column:
+    direction: Suunta
+    operation: Toiminto
+    local: Paikallinen
+    remote: Etäinen
+    reason: Miksi
+    outcome: Tulos
+  action:
+    cancel: Peruuta
+    refresh: 'Suunnittele uudelleen'
+    apply: 'Hyväksy suunnitelma'
+    apply_confirm: 'Kirjoitetaanko kaikki suunnitellut muutokset molemmille puolille?'
+    link: Linkitä
+    keep_local: 'Pidä paikallinen'
+    keep_remote: 'Pidä etäinen'
+    diff: Kentät
+  diff:
+    field: Kenttä
+    local: 'Paikallinen arvo'
+    remote: 'Etäinen arvo'
+  status:
+    dry_run: 'Kuivaharjoitus: ei vielä mitään kirjoitettu.'
+    applied: 'Suunnitelma hyväksytty. Suunnittele uudelleen nähdäksesi, mitä on jäljellä.'
+  operation:
+    loading: Suunnittelu
+    local_link: Linkitä
+    local_create: 'Luo paikallisesti'
+    remote_create: 'Luo etänä'
+    local_update: Päivitä
+    remote_update: 'Päivitä etänä'
+    local_unlink: 'Poista linkki'
+    remote_disable: 'Poista käytöstä etänä'
+    remote_remove: 'Poista etänä'
+    candidate: Ehdokas
+    conflict: Konflikti
+    unmatched: Vastaamaton
+    postponed: Siirretty
+    up_to_date: Ajantasainen
+
+fr:
+  page_title: Plan de synchronisation
+  page_icon: ph:bold/arrows-left-right
+  empty: "Rien à faire : les deux côtés sont d'accord."
+  summary:
+    local: Entités locales
+    remote: Adapter distant
+    orphans: Orphelins (distants / locaux)
+    conflict: Conflits
+  column:
+    direction: Sens
+    operation: Opération
+    local: Local
+    remote: Distant
+    reason: Pourquoi
+    outcome: Résultat
+  action:
+    cancel: Annuler
+    refresh: Replanifier
+    apply: Appliquer le plan
+    apply_confirm: Écrire tous les changements prévus, des deux côtés ?
+    link: Lier
+    keep_local: Garder local
+    keep_remote: Garder distant
+    diff: Champs
+  diff:
+    field: Champ
+    local: Valeur locale
+    remote: Valeur distante
+  status:
+    dry_run: "Simulation : rien n'est encore écrit."
+    applied: Plan appliqué. Replanifiez pour voir ce qui reste.
+  operation:
+    loading: Planification
+    local_link: Lier
+    local_create: Créer en local
+    remote_create: Créer à distance
+    local_update: Mettre à jour
+    remote_update: Mettre à jour à distance
+    local_unlink: Délier
+    remote_disable: Désactiver à distance
+    remote_remove: Supprimer à distance
+    candidate: Candidat
+    conflict: Conflit
+    unmatched: Sans correspondance
+    postponed: Reporté
+    up_to_date: À jour
+
+he:
+  page_title: 'תוכנית סנכרון'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'אין מה לעשות: שני הצדדים מסכימים.'
+  summary:
+    local: 'יישויות מקומיות'
+    remote: 'מתאם מרוחק'
+    orphans: 'יתומים (מרוחק / מקומי)'
+    conflict: סכסוכים
+  column:
+    direction: כיוון
+    operation: פעולה
+    local: מקומי
+    remote: מרוחק
+    reason: למה
+    outcome: תוצאה
+  action:
+    cancel: בטל
+    refresh: 'תכנן שוב'
+    apply: 'החל את התוכנית'
+    apply_confirm: 'לכתוב כל שינוי מתוכנן בשני הצדדים?'
+    link: קשר
+    keep_local: 'שמור מקומי'
+    keep_remote: 'שמור מרוחק'
+    diff: שדות
+  diff:
+    field: שדה
+    local: 'ערך מקומי'
+    remote: 'ערך מרוחק'
+  status:
+    dry_run: 'הרצה יבשה: עדיין לא נכתבה שום דבר.'
+    applied: 'התוכנית הוחלה. תכנן שוב כדי לראות מה נשאר.'
+  operation:
+    loading: מתכנן
+    local_link: קשר
+    local_create: 'צור מקומית'
+    remote_create: 'צור מרוחק'
+    local_update: עדכן
+    remote_update: 'עדכן מרוחק'
+    local_unlink: 'הסר קשר'
+    remote_disable: 'כבוש מרוחק'
+    remote_remove: 'הסר מרוחק'
+    candidate: מועמד
+    conflict: סכסוך
+    unmatched: 'לא תואם'
+    postponed: נדחה
+    up_to_date: מעודכן
+
+hi:
+  page_title: 'सिंक योजना'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'कुछ करने को नहीं: दोनों पक्ष सहमत हैं।'
+  summary:
+    local: 'स्थानीय संस्थाएँ'
+    remote: 'दूरस्थ एडेप्टर'
+    orphans: 'अनाथ (दूरस्थ / स्थानीय)'
+    conflict: संघर्ष
+  column:
+    direction: दिशा
+    operation: संचालन
+    local: स्थानीय
+    remote: दूरस्थ
+    reason: क्यों
+    outcome: परिणाम
+  action:
+    cancel: 'रद्द करें'
+    refresh: 'फिर से योजना बनाएं'
+    apply: 'योजना लागू करें'
+    apply_confirm: 'क्या दोनों पक्षों पर प्रत्येक योजनाबद्ध परिवर्तन लिखें?'
+    link: लिंक
+    keep_local: 'स्थानीय रखें'
+    keep_remote: 'दूरस्थ रखें'
+    diff: क्षेत्र
+  diff:
+    field: क्षेत्र
+    local: 'स्थानीय मान'
+    remote: 'दूरस्थ मान'
+  status:
+    dry_run: 'सूखा चलाना: अभी तक कुछ नहीं लिखा गया।'
+    applied: 'योजना लागू की गई। देखिए कि क्या बचा है, फिर से योजना बनाएं।'
+  operation:
+    loading: 'योजना बनाना'
+    local_link: लिंक
+    local_create: 'स्थानीय रूप से बनाएं'
+    remote_create: 'दूरस्थ रूप से बनाएं'
+    local_update: 'अपडेट करें'
+    remote_update: 'दूरस्थ रूप से अपडेट करें'
+    local_unlink: 'अनलिंक करें'
+    remote_disable: 'दूरस्थ रूप से निष्क्रिय करें'
+    remote_remove: 'दूरस्थ रूप से हटा दें'
+    candidate: उम्मीदवार
+    conflict: संघर्ष
+    unmatched: असंगत
+    postponed: 'टाल दिया गया'
+    up_to_date: अपडेटेड
+
+id:
+  page_title: 'Rencana sinkronisasi'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'Tidak ada yang perlu dilakukan: kedua sisi setuju.'
+  summary:
+    local: 'Entitas lokal'
+    remote: 'Adaptor jarak jauh'
+    orphans: 'Yatim (jarak jauh / lokal)'
+    conflict: Konflik
+  column:
+    direction: Arah
+    operation: Operasi
+    local: Lokal
+    remote: 'Jarak jauh'
+    reason: Mengapa
+    outcome: Hasil
+  action:
+    cancel: Batal
+    refresh: 'Rencanakan ulang'
+    apply: 'Terapkan rencana'
+    apply_confirm: 'Tuliskan setiap perubahan yang direncanakan di kedua sisi?'
+    link: Tautkan
+    keep_local: 'Simpan lokal'
+    keep_remote: 'Simpan jarak jauh'
+    diff: Bidang
+  diff:
+    field: Bidang
+    local: 'Nilai lokal'
+    remote: 'Nilai jarak jauh'
+  status:
+    dry_run: 'Uji coba: belum ada yang ditulis.'
+    applied: 'Rencana diterapkan. Rencanakan ulang untuk melihat yang tersisa.'
+  operation:
+    loading: Merencanakan
+    local_link: Tautkan
+    local_create: 'Buat lokal'
+    remote_create: 'Buat jarak jauh'
+    local_update: Perbarui
+    remote_update: 'Perbarui jarak jauh'
+    local_unlink: 'Lepaskan tautan'
+    remote_disable: 'Nonaktifkan jarak jauh'
+    remote_remove: 'Hapus jarak jauh'
+    candidate: Kandidat
+    conflict: Konflik
+    unmatched: 'Tidak cocok'
+    postponed: Ditunda
+    up_to_date: Terbaru
+
+it:
+  page_title: 'Piano di sincronizzazione'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: "Niente da fare: entrambi i lati sono d'accordo."
+  summary:
+    local: 'Entità locali'
+    remote: 'Adattatore remoto'
+    orphans: 'Orfani (remoti / locali)'
+    conflict: Conflitti
+  column:
+    direction: Direzione
+    operation: Operazione
+    local: Locale
+    remote: Remoto
+    reason: Perché
+    outcome: Risultato
+  action:
+    cancel: Annulla
+    refresh: 'Pianifica di nuovo'
+    apply: 'Applica il piano'
+    apply_confirm: 'Scrivere ogni cambiamento pianificato su entrambi i lati?'
+    link: Collega
+    keep_local: 'Mantieni locale'
+    keep_remote: 'Mantieni remoto'
+    diff: Campi
+  diff:
+    field: Campo
+    local: 'Valore locale'
+    remote: 'Valore remoto'
+  status:
+    dry_run: 'Esecuzione di prova: niente scritto ancora.'
+    applied: 'Piano applicato. Pianifica di nuovo per vedere cosa rimane.'
+  operation:
+    loading: Pianificazione
+    local_link: Collega
+    local_create: 'Crea localmente'
+    remote_create: 'Crea remotamente'
+    local_update: Aggiorna
+    remote_update: 'Aggiorna remotamente'
+    local_unlink: Scollega
+    remote_disable: 'Disabilita remotamente'
+    remote_remove: 'Rimuovi remotamente'
+    candidate: Candidato
+    conflict: Conflitto
+    unmatched: 'Non corrispondente'
+    postponed: Rimandato
+    up_to_date: Aggiornato
+
+ja:
+  page_title: 同期プラン
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'やることはありません: 両方の側が合意しています。'
+  summary:
+    local: ローカルエンティティ
+    remote: リモートアダプタ
+    orphans: 孤立したもの（リモート／ローカル）
+    conflict: コンフリクト
+  column:
+    direction: 方向
+    operation: 操作
+    local: ローカル
+    remote: リモート
+    reason: 理由
+    outcome: 結果
+  action:
+    cancel: キャンセル
+    refresh: 再計画
+    apply: プランを適用
+    apply_confirm: 両方の側にすべての計画された変更を書き込みますか？
+    link: リンク
+    keep_local: ローカルを保持
+    keep_remote: リモートを保持
+    diff: フィールド
+  diff:
+    field: フィールド
+    local: ローカル値
+    remote: リモート値
+  status:
+    dry_run: 'ドライラン: まだ何も書き込まれていません。'
+    applied: プランが適用されました。残りを確認するために再計画してください。
+  operation:
+    loading: 計画中
+    local_link: ローカルリンク
+    local_create: ローカルに作成
+    remote_create: リモートに作成
+    local_update: 更新
+    remote_update: リモートで更新
+    local_unlink: リンク解除
+    remote_disable: リモートで無効
+    remote_remove: リモートで削除
+    candidate: 候補
+    conflict: コンフリクト
+    unmatched: 一致しない
+    postponed: 保留
+    up_to_date: 最新の状態
+
+ko:
+  page_title: '동기화 계획'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: '할 일이 없습니다: 양쪽 모두 동의합니다.'
+  summary:
+    local: '로컬 엔티티'
+    remote: '원격 어댑터'
+    orphans: '고아 (원격 / 로컬)'
+    conflict: 충돌
+  column:
+    direction: 방향
+    operation: 작업
+    local: 로컬
+    remote: 원격
+    reason: 이유
+    outcome: 결과
+  action:
+    cancel: 취소
+    refresh: '다시 계획하기'
+    apply: '계획 적용하기'
+    apply_confirm: '양쪽 모두에 계획된 변경사항을 기록하시겠습니까?'
+    link: 링크
+    keep_local: '로컬 유지'
+    keep_remote: '원격 유지'
+    diff: 필드
+  diff:
+    field: 필드
+    local: '로컬 값'
+    remote: '원격 값'
+  status:
+    dry_run: '드라이 런: 아직 작성되지 않았습니다.'
+    applied: '계획이 적용되었습니다. 남은 사항을 보려면 다시 계획하세요.'
+  operation:
+    loading: '계획 중'
+    local_link: '로컬 링크'
+    local_create: '로컬에서 생성'
+    remote_create: '원격에서 생성'
+    local_update: 업데이트
+    remote_update: '원격 업데이트'
+    local_unlink: '링크 해제'
+    remote_disable: '원격 비활성화'
+    remote_remove: '원격 제거'
+    candidate: 후보
+    conflict: 충돌
+    unmatched: '일치하지 않음'
+    postponed: 연기됨
+    up_to_date: '최신 상태'
+
+nl:
+  page_title: Synchronisatieplan
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'Niets te doen: beide zijden zijn het eens.'
+  summary:
+    local: 'Lokale entiteiten'
+    remote: Afstandsadapter
+    orphans: 'Weesobjecten (afstands / lokaal)'
+    conflict: Conflicten
+  column:
+    direction: Richting
+    operation: Actie
+    local: Lokaal
+    remote: Afstandelijk
+    reason: Waarom
+    outcome: Resultaat
+  action:
+    cancel: Annuleren
+    refresh: 'Plan opnieuw'
+    apply: 'Pas het plan toe'
+    apply_confirm: 'Elke geplande wijziging aan beide zijden schrijven?'
+    link: Koppelen
+    keep_local: 'Lokaal behouden'
+    keep_remote: 'Afstandelijk behouden'
+    diff: Velden
+  diff:
+    field: Veld
+    local: 'Lokale waarde'
+    remote: Afstandswaarde
+  status:
+    dry_run: 'Droogloop: nog niets geschreven.'
+    applied: 'Plan toegepast. Plan opnieuw om te zien wat er nog over is.'
+  operation:
+    loading: Plannen
+    local_link: Koppelen
+    local_create: 'Lokaal aanmaken'
+    remote_create: 'Afstandsgewijs aanmaken'
+    local_update: Bijwerken
+    remote_update: 'Afstandsgewijs bijwerken'
+    local_unlink: Ontkoppelen
+    remote_disable: 'Afstandsgewijs uitschakelen'
+    remote_remove: 'Afstandsgewijs verwijderen'
+    candidate: Kandidaat
+    conflict: Conflict
+    unmatched: 'Niet overeenkomend'
+    postponed: Uitgesteld
+    up_to_date: Bijgewerkt
+
+pl:
+  page_title: 'Plan synchronizacji'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'Nic do zrobienia: obie strony się zgadzają.'
+  summary:
+    local: 'Lokalne jednostki'
+    remote: 'Zdalny adapter'
+    orphans: 'Osierocone (zdalne / lokalne)'
+    conflict: Konflikty
+  column:
+    direction: Kierunek
+    operation: Operacja
+    local: Lokalnie
+    remote: Zdalnie
+    reason: Dlaczego
+    outcome: Wynik
+  action:
+    cancel: Anuluj
+    refresh: 'Zaplanuj ponownie'
+    apply: 'Zastosuj plan'
+    apply_confirm: 'Zapisz każdą zaplanowaną zmianę po obu stronach?'
+    link: Połącz
+    keep_local: 'Zachowaj lokalnie'
+    keep_remote: 'Zachowaj zdalnie'
+    diff: Pola
+  diff:
+    field: Pole
+    local: 'Wartość lokalna'
+    remote: 'Wartość zdalna'
+  status:
+    dry_run: 'Symulacja: nic jeszcze nie zapisano.'
+    applied: 'Plan zastosowany. Zaplanuj ponownie, aby zobaczyć, co pozostało.'
+  operation:
+    loading: Planowanie
+    local_link: Połączenie
+    local_create: 'Utwórz lokalnie'
+    remote_create: 'Utwórz zdalnie'
+    local_update: Aktualizuj
+    remote_update: 'Aktualizuj zdalnie'
+    local_unlink: Odłącz
+    remote_disable: 'Wyłącz zdalnie'
+    remote_remove: 'Usuń zdalnie'
+    candidate: Kandydat
+    conflict: Konflikt
+    unmatched: Niepasujące
+    postponed: Odłożone
+    up_to_date: Aktualne
+
+pt_BR:
+  page_title: 'Plano de Sincronização'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'Nada a fazer: ambos os lados concordam.'
+  summary:
+    local: 'Entidades locais'
+    remote: 'Adaptador remoto'
+    orphans: 'Órfãos (remoto / local)'
+    conflict: Conflitos
+  column:
+    direction: Direção
+    operation: Operação
+    local: Local
+    remote: Remoto
+    reason: 'Por quê'
+    outcome: Resultado
+  action:
+    cancel: Cancelar
+    refresh: 'Planejar novamente'
+    apply: 'Aplicar o plano'
+    apply_confirm: 'Registrar todas as alterações planejadas em ambos os lados?'
+    link: Vincular
+    keep_local: 'Manter local'
+    keep_remote: 'Manter remoto'
+    diff: Campos
+  diff:
+    field: Campo
+    local: 'Valor local'
+    remote: 'Valor remoto'
+  status:
+    dry_run: 'Execução de teste: nada escrito ainda.'
+    applied: 'Plano aplicado. Planeje novamente para ver o que resta.'
+  operation:
+    loading: Planejando
+    local_link: Vincular
+    local_create: 'Criar localmente'
+    remote_create: 'Criar remotamente'
+    local_update: Atualizar
+    remote_update: 'Atualizar remotamente'
+    local_unlink: Desvincular
+    remote_disable: 'Desativar remotamente'
+    remote_remove: 'Remover remotamente'
+    candidate: Candidato
+    conflict: Conflito
+    unmatched: 'Não correspondido'
+    postponed: Adiado
+    up_to_date: Atualizado
+
+ru:
+  page_title: 'План синхронизации'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'Ничего не нужно делать: обе стороны согласны.'
+  summary:
+    local: 'Локальные сущности'
+    remote: 'Удаленный адаптер'
+    orphans: 'Сироты (удаленные / локальные)'
+    conflict: Конфликты
+  column:
+    direction: Направление
+    operation: Операция
+    local: Локальный
+    remote: Удаленный
+    reason: Почему
+    outcome: Результат
+  action:
+    cancel: Отмена
+    refresh: 'Запланировать снова'
+    apply: 'Применить план'
+    apply_confirm: 'Записать все запланированные изменения на обеих сторонах?'
+    link: Ссылка
+    keep_local: 'Сохранить локальный'
+    keep_remote: 'Сохранить удаленный'
+    diff: Поля
+  diff:
+    field: Поле
+    local: 'Локальное значение'
+    remote: 'Удаленное значение'
+  status:
+    dry_run: 'Тестовый запуск: ничего еще не записано.'
+    applied: 'План применен. Запланируйте снова, чтобы увидеть, что осталось.'
+  operation:
+    loading: Планирование
+    local_link: Ссылка
+    local_create: 'Создать локально'
+    remote_create: 'Создать удаленно'
+    local_update: Обновить
+    remote_update: 'Обновить удаленно'
+    local_unlink: 'Отменить ссылку'
+    remote_disable: 'Отключить удаленно'
+    remote_remove: 'Удалить удаленно'
+    candidate: Кандидат
+    conflict: Конфликт
+    unmatched: Несоответствие
+    postponed: Отложено
+    up_to_date: Актуально
+
+th:
+  page_title: แผนการซิงค์
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'ไม่มีอะไรต้องทำ: ทั้งสองฝ่ายเห็นด้วย.'
+  summary:
+    local: หน่วยงานท้องถิ่น
+    remote: อะแดปเตอร์ระยะไกล
+    orphans: 'ออร์แฟน (ระยะไกล / ท้องถิ่น)'
+    conflict: ความขัดแย้ง
+  column:
+    direction: ทิศทาง
+    operation: การดำเนินการ
+    local: ท้องถิ่น
+    remote: ระยะไกล
+    reason: ทำไม
+    outcome: ผลลัพธ์
+  action:
+    cancel: ยกเลิก
+    refresh: วางแผนใหม่
+    apply: ใช้แผน
+    apply_confirm: 'เขียนการเปลี่ยนแปลงที่วางแผนไว้ทุกอย่างในทั้งสองฝ่าย?'
+    link: เชื่อมโยง
+    keep_local: เก็บแบบท้องถิ่น
+    keep_remote: เก็บแบบระยะไกล
+    diff: ฟิลด์
+  diff:
+    field: ฟิลด์
+    local: ค่าท้องถิ่น
+    remote: ค่าระยะไกล
+  status:
+    dry_run: 'การรันแบบทดสอบ: ยังไม่มีการเขียนข้อมูล.'
+    applied: 'แผนถูกใช้แล้ว วางแผนใหม่เพื่อดูว่ายังเหลืออะไรอยู่.'
+  operation:
+    loading: กำลังวางแผน
+    local_link: เชื่อมโยงแบบท้องถิ่น
+    local_create: สร้างในท้องถิ่น
+    remote_create: สร้างในระยะไกล
+    local_update: อัปเดต
+    remote_update: อัปเดตในระยะไกล
+    local_unlink: ยกเลิกการเชื่อมโยง
+    remote_disable: ปิดการใช้งานในระยะไกล
+    remote_remove: ลบในระยะไกล
+    candidate: ผู้สมัคร
+    conflict: ความขัดแย้ง
+    unmatched: ยังไม่ตรงกัน
+    postponed: เลื่อนออกไป
+    up_to_date: ทันสมัย
+
+tr:
+  page_title: 'Senkranizasyon planı'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'Yapılacak bir şey yok: her iki taraf da anlaşıyor.'
+  summary:
+    local: 'Yerel varlıklar'
+    remote: 'Uzak adaptör'
+    orphans: 'Yalnızlar (uzak / yerel)'
+    conflict: Çatışmalar
+  column:
+    direction: Yön
+    operation: İşlem
+    local: Yerel
+    remote: Uzak
+    reason: Neden
+    outcome: Sonuç
+  action:
+    cancel: İptal
+    refresh: 'Tekrar planla'
+    apply: 'Planı uygula'
+    apply_confirm: 'Her iki tarafta da planlanan değişiklikleri yazmak ister misiniz?'
+    link: Bağla
+    keep_local: 'Yerelde tut'
+    keep_remote: 'Uzakta tut'
+    diff: Alanlar
+  diff:
+    field: Alan
+    local: 'Yerel değer'
+    remote: 'Uzak değer'
+  status:
+    dry_run: 'Deneme: henüz bir şey yazılmadı.'
+    applied: 'Plan uygulandı. Kalanları görmek için tekrar planla.'
+  operation:
+    loading: Planlanıyor
+    local_link: 'Bağlantı oluştur'
+    local_create: 'Yerelde oluştur'
+    remote_create: 'Uzakta oluştur'
+    local_update: Güncelle
+    remote_update: 'Uzakta güncelle'
+    local_unlink: 'Bağlantıyı kes'
+    remote_disable: 'Uzakta devre dışı bırak'
+    remote_remove: 'Uzakta kaldır'
+    candidate: Aday
+    conflict: Çatışma
+    unmatched: Eşleşmiyor
+    postponed: Ertelendi
+    up_to_date: Güncel
+
+ur:
+  page_title: 'ہم آہنگی کا منصوبہ'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'کچھ نہیں کرنا: دونوں طرفوں کی رضا مندی ہے۔'
+  summary:
+    local: 'مقامی عناصر'
+    remote: 'دور دراز کا ایڈاپٹر'
+    orphans: 'یتیم (دور دراز / مقامی)'
+    conflict: تنازعات
+  column:
+    direction: سمت
+    operation: عمل
+    local: مقامی
+    remote: 'دور دراز'
+    reason: کیوں
+    outcome: نتیجہ
+  action:
+    cancel: 'منسوخ کریں'
+    refresh: 'پھر سے منصوبہ بنائیں'
+    apply: 'منصوبے کو نافذ کریں'
+    apply_confirm: 'کیا دونوں طرف ہر منصوبہ بند تبدیلی لکھیں؟'
+    link: 'لنک کریں'
+    keep_local: 'مقامی رکھیں'
+    keep_remote: 'دور دراز رکھیں'
+    diff: فیلڈز
+  diff:
+    field: فیلڈ
+    local: 'مقامی قیمت'
+    remote: 'دور دراز قیمت'
+  status:
+    dry_run: 'خشک چلائیں: ابھی تک کچھ نہیں لکھا گیا۔'
+    applied: 'منصوبہ نافذ کیا گیا۔ باقی دیکھنے کے لیے دوبارہ منصوبہ بنائیں۔'
+  operation:
+    loading: 'منصوبہ بندی'
+    local_link: 'لنک بنائیں'
+    local_create: 'مقامی طور پر بنائیں'
+    remote_create: 'دور دراز بنائیں'
+    local_update: 'اپ ڈیٹ کریں'
+    remote_update: 'دور دراز اپ ڈیٹ کریں'
+    local_unlink: 'لنک ختم کریں'
+    remote_disable: 'دور دراز غیر فعال کریں'
+    remote_remove: 'دور دراز ہٹا دیں'
+    candidate: امیدوار
+    conflict: تنازعہ
+    unmatched: 'میچ نہیں ہوا'
+    postponed: 'موخر کر دیا گیا'
+    up_to_date: 'اپ ڈیٹ'
+
+vi:
+  page_title: 'Kế hoạch đồng bộ'
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 'Không có gì để làm: cả hai bên đều đồng ý.'
+  summary:
+    local: 'Thực thể cục bộ'
+    remote: 'Bộ điều hợp từ xa'
+    orphans: 'Mồ côi (từ xa / cục bộ)'
+    conflict: 'Xung đột'
+  column:
+    direction: Hướng
+    operation: 'Hoạt động'
+    local: 'Cục bộ'
+    remote: 'Từ xa'
+    reason: 'Tại sao'
+    outcome: 'Kết quả'
+  action:
+    cancel: Hủy
+    refresh: 'Lập lại kế hoạch'
+    apply: 'Áp dụng kế hoạch'
+    apply_confirm: 'Ghi lại mọi thay đổi đã lên kế hoạch trên cả hai bên?'
+    link: 'Liên kết'
+    keep_local: 'Giữ cục bộ'
+    keep_remote: 'Giữ từ xa'
+    diff: Trường
+  diff:
+    field: Trường
+    local: 'Giá trị cục bộ'
+    remote: 'Giá trị từ xa'
+  status:
+    dry_run: 'Chạy thử: chưa ghi gì cả.'
+    applied: 'Kế hoạch đã được áp dụng. Lập lại kế hoạch để xem còn lại gì.'
+  operation:
+    loading: 'Đang lập kế hoạch'
+    local_link: 'Liên kết cục bộ'
+    local_create: 'Tạo cục bộ'
+    remote_create: 'Tạo từ xa'
+    local_update: 'Cập nhật'
+    remote_update: 'Cập nhật từ xa'
+    local_unlink: 'Gỡ liên kết'
+    remote_disable: 'Vô hiệu hóa từ xa'
+    remote_remove: 'Xóa từ xa'
+    candidate: 'Ứng viên'
+    conflict: 'Xung đột'
+    unmatched: 'Không khớp'
+    postponed: 'Đã hoãn'
+    up_to_date: 'Đã cập nhật'
+
+zh:
+  page_title: 同步计划
+  page_icon: 'ph:bold/arrows-left-right'
+  empty: 无事可做：双方一致同意。
+  summary:
+    local: 本地实体
+    remote: 远程适配器
+    orphans: 孤立（远程/本地）
+    conflict: 冲突
+  column:
+    direction: 方向
+    operation: 操作
+    local: 本地
+    remote: 远程
+    reason: 原因
+    outcome: 结果
+  action:
+    cancel: 取消
+    refresh: 重新规划
+    apply: 应用计划
+    apply_confirm: 在两边写下每个计划的更改吗？
+    link: 链接
+    keep_local: 保留本地
+    keep_remote: 保留远程
+    diff: 字段
+  diff:
+    field: 字段
+    local: 本地值
+    remote: 远程值
+  status:
+    dry_run: 干运行：尚未写入任何内容。
+    applied: 计划已应用。再次规划以查看剩余内容。
+  operation:
+    loading: 规划中
+    local_link: 链接
+    local_create: 本地创建
+    remote_create: 远程创建
+    local_update: 更新
+    remote_update: 远程更新
+    local_unlink: 取消链接
+    remote_disable: 远程禁用
+    remote_remove: 远程移除
+    candidate: 候选
+    conflict: 冲突
+    unmatched: 不匹配
+    postponed: 已推迟
+    up_to_date: 已更新

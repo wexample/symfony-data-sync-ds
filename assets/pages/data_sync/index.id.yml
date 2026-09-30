@@ -1,8 +1,0 @@
-page_title: 'Sinkronisasi data'
-page_icon: 'ph:bold/arrows-clockwise'
-empty: 'Tidak ada definisi sinkronisasi yang dideklarasikan dalam aplikasi ini.'
-column:
-  definition: Definisi
-  local: 'Entitas lokal'
-  remote: 'Adapter jarak jauh'
-open: 'Tinjau rencana'

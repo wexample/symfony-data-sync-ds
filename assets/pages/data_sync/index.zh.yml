@@ -1,8 +1,0 @@
-page_title: 数据同步
-page_icon: 'ph:bold/arrows-clockwise'
-empty: 此应用程序中未声明同步定义。
-column:
-  definition: 定义
-  local: 本地实体
-  remote: 远程适配器
-open: 查看计划

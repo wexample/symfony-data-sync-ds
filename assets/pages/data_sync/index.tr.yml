@@ -1,8 +1,0 @@
-page_title: 'Veri senkronizasyonu'
-page_icon: 'ph:bold/arrows-clockwise'
-empty: 'Bu uygulamada hiçbir senkronizasyon tanımı belirtilmemiş.'
-column:
-  definition: Tanım
-  local: 'Yerel varlıklar'
-  remote: 'Uzak adaptör'
-open: 'Planı gözden geçir'

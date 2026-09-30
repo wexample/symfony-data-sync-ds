@@ -1,8 +1,0 @@
-page_title: 'تزامن البيانات'
-page_icon: 'ph:bold/arrows-clockwise'
-empty: 'لا يوجد تعريف تزامن محدد في هذا التطبيق.'
-column:
-  definition: التعريف
-  local: 'الكيانات المحلية'
-  remote: 'محول بعيد'
-open: 'راجع الخطة'

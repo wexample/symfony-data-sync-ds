@@ -1,0 +1,229 @@
+en:
+  page_title: Data sync
+  page_icon: ph:bold/arrows-clockwise
+  empty: No sync definition is declared in this application.
+  column:
+    definition: Definition
+    local: Local entities
+    remote: Remote adapter
+  open: Review the plan
+
+ar:
+  page_title: 'تزامن البيانات'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'لا يوجد تعريف تزامن محدد في هذا التطبيق.'
+  column:
+    definition: التعريف
+    local: 'الكيانات المحلية'
+    remote: 'محول بعيد'
+  open: 'راجع الخطة'
+
+bn:
+  page_title: 'ডেটা সিঙ্ক'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'এই অ্যাপে কোনও সিঙ্ক সংজ্ঞা ঘোষণা করা হয়নি।'
+  column:
+    definition: সংজ্ঞা
+    local: 'স্থানীয় সত্তা'
+    remote: 'দূরবর্তী অ্যাডাপ্টার'
+  open: 'পরিকল্পনা পর্যালোচনা করুন'
+
+de:
+  page_title: 'Daten synchronisieren'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'Es ist keine Synchronisierungsdefinition in dieser Anwendung festgelegt.'
+  column:
+    definition: Definition
+    local: 'Lokale Entitäten'
+    remote: 'Entfernte Adapter'
+  open: 'Plan überprüfen'
+
+es:
+  page_title: 'Sincronización de datos'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'No se ha declarado ninguna definición de sincronización en esta aplicación.'
+  column:
+    definition: Definición
+    local: 'Entidades locales'
+    remote: 'Adaptador remoto'
+  open: 'Revisar el plan'
+
+fa:
+  page_title: 'همگام‌سازی داده'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'هیچ تعریف همگام‌سازی در این برنامه اعلام نشده است.'
+  column:
+    definition: تعریف
+    local: 'موجودیت‌های محلی'
+    remote: 'آداپتور راه دور'
+  open: 'برنامه را بررسی کنید'
+
+fi:
+  page_title: Tietosynkronointi
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'Tässä sovelluksessa ei ole määritelty synkronointia.'
+  column:
+    definition: Määritelmä
+    local: 'Paikalliset entiteetit'
+    remote: Etäadapteri
+  open: 'Tarkista suunnitelma'
+
+fr:
+  page_title: Synchronisation
+  page_icon: ph:bold/arrows-clockwise
+  empty: Aucune définition de synchronisation n'est déclarée dans cette application.
+  column:
+    definition: Définition
+    local: Entités locales
+    remote: Adapter distant
+  open: Voir le plan
+
+he:
+  page_title: 'סנכרון נתונים'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'לא הוגדרה הגדרת סנכרון באפליקציה זו.'
+  column:
+    definition: הגדרה
+    local: 'יישויות מקומיות'
+    remote: 'מתאם מרוחק'
+  open: 'סקור את התוכנית'
+
+hi:
+  page_title: 'डेटा समन्वय'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'इस अनुप्रयोग में कोई समन्वय परिभाषा घोषित नहीं है।'
+  column:
+    definition: परिभाषा
+    local: 'स्थानीय संस्थाएँ'
+    remote: 'दूरस्थ अडाप्टर'
+  open: 'योजना की समीक्षा करें'
+
+id:
+  page_title: 'Sinkronisasi data'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'Tidak ada definisi sinkronisasi yang dideklarasikan dalam aplikasi ini.'
+  column:
+    definition: Definisi
+    local: 'Entitas lokal'
+    remote: 'Adapter jarak jauh'
+  open: 'Tinjau rencana'
+
+it:
+  page_title: 'Sincronizzazione dati'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'Nessuna definizione di sincronizzazione è dichiarata in questa applicazione.'
+  column:
+    definition: Definizione
+    local: 'Entità locali'
+    remote: 'Adattatore remoto'
+  open: 'Rivedi il piano'
+
+ja:
+  page_title: データ同期
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: このアプリケーションでは同期定義が宣言されていません。
+  column:
+    definition: 定義
+    local: ローカルエンティティ
+    remote: リモートアダプタ
+  open: プランを確認する
+
+ko:
+  page_title: '데이터 동기화'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: '이 애플리케이션에 동기화 정의가 없습니다.'
+  column:
+    definition: 정의
+    local: '로컬 엔티티'
+    remote: '원격 어댑터'
+  open: '계획 검토하기'
+
+nl:
+  page_title: 'Gegevens synchroniseren'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'Er is geen synchronisatiedefinitie gedefinieerd in deze applicatie.'
+  column:
+    definition: Definitie
+    local: 'Lokale entiteiten'
+    remote: 'Externe adapter'
+  open: 'Bekijk het plan'
+
+pl:
+  page_title: 'Synchronizacja danych'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'Nie zdefiniowano definicji synchronizacji w tej aplikacji.'
+  column:
+    definition: Definicja
+    local: 'Lokalne jednostki'
+    remote: 'Zdalny adapter'
+  open: 'Przejrzyj plan'
+
+pt_BR:
+  page_title: 'Sincronização de dados'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'Nenhuma definição de sincronização foi declarada neste aplicativo.'
+  column:
+    definition: Definição
+    local: 'Entidades locais'
+    remote: 'Adaptador remoto'
+  open: 'Revisar o plano'
+
+ru:
+  page_title: 'Синхронизация данных'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'В этом приложении не объявлено определение синхронизации.'
+  column:
+    definition: Определение
+    local: 'Локальные сущности'
+    remote: 'Удалённый адаптер'
+  open: 'Просмотреть план'
+
+th:
+  page_title: การซิงค์ข้อมูล
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: ไม่มีการกำหนดการซิงค์ในแอปพลิเคชันนี้
+  column:
+    definition: การกำหนด
+    local: หน่วยงานในท้องถิ่น
+    remote: อะแดปเตอร์ระยะไกล
+  open: ตรวจสอบแผน
+
+tr:
+  page_title: 'Veri senkronizasyonu'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'Bu uygulamada hiçbir senkronizasyon tanımı belirtilmemiş.'
+  column:
+    definition: Tanım
+    local: 'Yerel varlıklar'
+    remote: 'Uzak adaptör'
+  open: 'Planı gözden geçir'
+
+ur:
+  page_title: 'ڈیٹا ہم آہنگی'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'اس ایپلیکیشن میں کوئی ہم آہنگی کی وضاحت نہیں کی گئی۔'
+  column:
+    definition: وضاحت
+    local: 'مقامی عناصر'
+    remote: 'دور دراز کا ایڈاپٹر'
+  open: 'منصوبے کا جائزہ لیں'
+
+vi:
+  page_title: 'Đồng bộ dữ liệu'
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 'Không có định nghĩa đồng bộ nào được khai báo trong ứng dụng này.'
+  column:
+    definition: 'Định nghĩa'
+    local: 'Thực thể cục bộ'
+    remote: 'Bộ điều hợp từ xa'
+  open: 'Xem kế hoạch'
+
+zh:
+  page_title: 数据同步
+  page_icon: 'ph:bold/arrows-clockwise'
+  empty: 此应用程序中未声明同步定义。
+  column:
+    definition: 定义
+    local: 本地实体
+    remote: 远程适配器
+  open: 查看计划
