@@ -1295,6 +1295,330 @@
             "engine": "syrtis"
         }
     },
+    "pages/data_sync/definition.id.yml": {
+        "action.apply": {
+            "hash": "f17e5205364d5f43b9a1ae68ed002dae",
+            "engine": "syrtis"
+        },
+        "action.apply_confirm": {
+            "hash": "c0c7a1ece3d349b9552d5fb14b4d411d",
+            "engine": "syrtis"
+        },
+        "action.cancel": {
+            "hash": "121cad078beccff8a1ea9128c3906546",
+            "engine": "syrtis"
+        },
+        "action.diff": {
+            "hash": "870e7110424049df694648e4f7219f05",
+            "engine": "syrtis"
+        },
+        "action.keep_local": {
+            "hash": "9035c76268e2fdf86024c632d050ff4b",
+            "engine": "syrtis"
+        },
+        "action.keep_remote": {
+            "hash": "046998e0f2d4419a427f47d889296044",
+            "engine": "syrtis"
+        },
+        "action.link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "action.refresh": {
+            "hash": "f43f3edce8c175a7204a803e35514490",
+            "engine": "syrtis"
+        },
+        "column.direction": {
+            "hash": "b597c8ce902d9ec54042301a54b7bfa2",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "035210e7de7e2e10331af1093d5ac4ad",
+            "engine": "syrtis"
+        },
+        "column.operation": {
+            "hash": "046ed7ce962768e75c31f20dd8d66ec5",
+            "engine": "syrtis"
+        },
+        "column.outcome": {
+            "hash": "5c0e84572801f008786ba9b3a1d622c1",
+            "engine": "syrtis"
+        },
+        "column.reason": {
+            "hash": "c1a8b75e9deba0356ff2065dc49abc84",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "f5e46f3ff3a04074745361307cdf9137",
+            "engine": "syrtis"
+        },
+        "diff.field": {
+            "hash": "f0c9a944867826856ffd939d1237bf6a",
+            "engine": "syrtis"
+        },
+        "diff.local": {
+            "hash": "99f85299c642f28fdd50fb49ede61c1c",
+            "engine": "syrtis"
+        },
+        "diff.remote": {
+            "hash": "b9a3109f3f6060ac36015f8f510624bf",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1447395abe77b5d10c8155bf962e2f80",
+            "engine": "syrtis"
+        },
+        "operation.candidate": {
+            "hash": "4fa4c87e3ecbd02872cdf84952457f82",
+            "engine": "syrtis"
+        },
+        "operation.conflict": {
+            "hash": "888d48ab2877ffe81bc372e3d0cb2639",
+            "engine": "syrtis"
+        },
+        "operation.loading": {
+            "hash": "841bbaf5120ffb09f0e7b14c0403299f",
+            "engine": "syrtis"
+        },
+        "operation.local_create": {
+            "hash": "ef9f2991bd51b05b28d26476f90c2285",
+            "engine": "syrtis"
+        },
+        "operation.local_link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "operation.local_unlink": {
+            "hash": "f9cf586e42e6f29ce2e68e7bd3ace5e5",
+            "engine": "syrtis"
+        },
+        "operation.local_update": {
+            "hash": "d705b0476cdfe536387d31cfdeaeecc2",
+            "engine": "syrtis"
+        },
+        "operation.postponed": {
+            "hash": "1ab68b0531533acbf01b5a24aafef20b",
+            "engine": "syrtis"
+        },
+        "operation.remote_create": {
+            "hash": "4cdbe82d8c60f77da94c0c21318afff3",
+            "engine": "syrtis"
+        },
+        "operation.remote_disable": {
+            "hash": "b3fce49fe9dbb4aac6abbd018fa810e4",
+            "engine": "syrtis"
+        },
+        "operation.remote_remove": {
+            "hash": "597631a77e1f83ca2bf99870de564bac",
+            "engine": "syrtis"
+        },
+        "operation.remote_update": {
+            "hash": "33d8d8f5b8b51a0b771e292086eb3056",
+            "engine": "syrtis"
+        },
+        "operation.unmatched": {
+            "hash": "77f73c2b5e13f8cb99a7d53afe9057fc",
+            "engine": "syrtis"
+        },
+        "operation.up_to_date": {
+            "hash": "f9312032d11c4bef6053cc365d8f5f31",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "438fa33d09e44f2dd509d1a8750d9d34",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "2109967002e11de4444932440367104d",
+            "engine": "syrtis"
+        },
+        "status.applied": {
+            "hash": "56c3fc51bd4423e6fabdb4380b15cd1f",
+            "engine": "syrtis"
+        },
+        "status.dry_run": {
+            "hash": "05a1dcf4fea5f0207cbbbcb0c6334cfe",
+            "engine": "syrtis"
+        },
+        "summary.conflict": {
+            "hash": "bbe58f6702bce03b8cd2bd15faf0412a",
+            "engine": "syrtis"
+        },
+        "summary.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "summary.orphans": {
+            "hash": "37d5fa56961fadd36c220237d87ea37e",
+            "engine": "syrtis"
+        },
+        "summary.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        }
+    },
+    "pages/data_sync/definition.it.yml": {
+        "action.apply": {
+            "hash": "f17e5205364d5f43b9a1ae68ed002dae",
+            "engine": "syrtis"
+        },
+        "action.apply_confirm": {
+            "hash": "c0c7a1ece3d349b9552d5fb14b4d411d",
+            "engine": "syrtis"
+        },
+        "action.cancel": {
+            "hash": "121cad078beccff8a1ea9128c3906546",
+            "engine": "syrtis"
+        },
+        "action.diff": {
+            "hash": "870e7110424049df694648e4f7219f05",
+            "engine": "syrtis"
+        },
+        "action.keep_local": {
+            "hash": "9035c76268e2fdf86024c632d050ff4b",
+            "engine": "syrtis"
+        },
+        "action.keep_remote": {
+            "hash": "046998e0f2d4419a427f47d889296044",
+            "engine": "syrtis"
+        },
+        "action.link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "action.refresh": {
+            "hash": "f43f3edce8c175a7204a803e35514490",
+            "engine": "syrtis"
+        },
+        "column.direction": {
+            "hash": "b597c8ce902d9ec54042301a54b7bfa2",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "035210e7de7e2e10331af1093d5ac4ad",
+            "engine": "syrtis"
+        },
+        "column.operation": {
+            "hash": "046ed7ce962768e75c31f20dd8d66ec5",
+            "engine": "syrtis"
+        },
+        "column.outcome": {
+            "hash": "5c0e84572801f008786ba9b3a1d622c1",
+            "engine": "syrtis"
+        },
+        "column.reason": {
+            "hash": "c1a8b75e9deba0356ff2065dc49abc84",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "f5e46f3ff3a04074745361307cdf9137",
+            "engine": "syrtis"
+        },
+        "diff.field": {
+            "hash": "f0c9a944867826856ffd939d1237bf6a",
+            "engine": "syrtis"
+        },
+        "diff.local": {
+            "hash": "99f85299c642f28fdd50fb49ede61c1c",
+            "engine": "syrtis"
+        },
+        "diff.remote": {
+            "hash": "b9a3109f3f6060ac36015f8f510624bf",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1447395abe77b5d10c8155bf962e2f80",
+            "engine": "syrtis"
+        },
+        "operation.candidate": {
+            "hash": "4fa4c87e3ecbd02872cdf84952457f82",
+            "engine": "syrtis"
+        },
+        "operation.conflict": {
+            "hash": "888d48ab2877ffe81bc372e3d0cb2639",
+            "engine": "syrtis"
+        },
+        "operation.loading": {
+            "hash": "841bbaf5120ffb09f0e7b14c0403299f",
+            "engine": "syrtis"
+        },
+        "operation.local_create": {
+            "hash": "ef9f2991bd51b05b28d26476f90c2285",
+            "engine": "syrtis"
+        },
+        "operation.local_link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "operation.local_unlink": {
+            "hash": "f9cf586e42e6f29ce2e68e7bd3ace5e5",
+            "engine": "syrtis"
+        },
+        "operation.local_update": {
+            "hash": "d705b0476cdfe536387d31cfdeaeecc2",
+            "engine": "syrtis"
+        },
+        "operation.postponed": {
+            "hash": "1ab68b0531533acbf01b5a24aafef20b",
+            "engine": "syrtis"
+        },
+        "operation.remote_create": {
+            "hash": "4cdbe82d8c60f77da94c0c21318afff3",
+            "engine": "syrtis"
+        },
+        "operation.remote_disable": {
+            "hash": "b3fce49fe9dbb4aac6abbd018fa810e4",
+            "engine": "syrtis"
+        },
+        "operation.remote_remove": {
+            "hash": "597631a77e1f83ca2bf99870de564bac",
+            "engine": "syrtis"
+        },
+        "operation.remote_update": {
+            "hash": "33d8d8f5b8b51a0b771e292086eb3056",
+            "engine": "syrtis"
+        },
+        "operation.unmatched": {
+            "hash": "77f73c2b5e13f8cb99a7d53afe9057fc",
+            "engine": "syrtis"
+        },
+        "operation.up_to_date": {
+            "hash": "f9312032d11c4bef6053cc365d8f5f31",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "438fa33d09e44f2dd509d1a8750d9d34",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "2109967002e11de4444932440367104d",
+            "engine": "syrtis"
+        },
+        "status.applied": {
+            "hash": "56c3fc51bd4423e6fabdb4380b15cd1f",
+            "engine": "syrtis"
+        },
+        "status.dry_run": {
+            "hash": "05a1dcf4fea5f0207cbbbcb0c6334cfe",
+            "engine": "syrtis"
+        },
+        "summary.conflict": {
+            "hash": "bbe58f6702bce03b8cd2bd15faf0412a",
+            "engine": "syrtis"
+        },
+        "summary.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "summary.orphans": {
+            "hash": "37d5fa56961fadd36c220237d87ea37e",
+            "engine": "syrtis"
+        },
+        "summary.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        }
+    },
     "pages/data_sync/definition.ja.yml": {
         "action.apply": {
             "hash": "f17e5205364d5f43b9a1ae68ed002dae",
@@ -1619,7 +1943,331 @@
             "engine": "syrtis"
         }
     },
+    "pages/data_sync/definition.nl.yml": {
+        "action.apply": {
+            "hash": "f17e5205364d5f43b9a1ae68ed002dae",
+            "engine": "syrtis"
+        },
+        "action.apply_confirm": {
+            "hash": "c0c7a1ece3d349b9552d5fb14b4d411d",
+            "engine": "syrtis"
+        },
+        "action.cancel": {
+            "hash": "121cad078beccff8a1ea9128c3906546",
+            "engine": "syrtis"
+        },
+        "action.diff": {
+            "hash": "870e7110424049df694648e4f7219f05",
+            "engine": "syrtis"
+        },
+        "action.keep_local": {
+            "hash": "9035c76268e2fdf86024c632d050ff4b",
+            "engine": "syrtis"
+        },
+        "action.keep_remote": {
+            "hash": "046998e0f2d4419a427f47d889296044",
+            "engine": "syrtis"
+        },
+        "action.link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "action.refresh": {
+            "hash": "f43f3edce8c175a7204a803e35514490",
+            "engine": "syrtis"
+        },
+        "column.direction": {
+            "hash": "b597c8ce902d9ec54042301a54b7bfa2",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "035210e7de7e2e10331af1093d5ac4ad",
+            "engine": "syrtis"
+        },
+        "column.operation": {
+            "hash": "046ed7ce962768e75c31f20dd8d66ec5",
+            "engine": "syrtis"
+        },
+        "column.outcome": {
+            "hash": "5c0e84572801f008786ba9b3a1d622c1",
+            "engine": "syrtis"
+        },
+        "column.reason": {
+            "hash": "c1a8b75e9deba0356ff2065dc49abc84",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "f5e46f3ff3a04074745361307cdf9137",
+            "engine": "syrtis"
+        },
+        "diff.field": {
+            "hash": "f0c9a944867826856ffd939d1237bf6a",
+            "engine": "syrtis"
+        },
+        "diff.local": {
+            "hash": "99f85299c642f28fdd50fb49ede61c1c",
+            "engine": "syrtis"
+        },
+        "diff.remote": {
+            "hash": "b9a3109f3f6060ac36015f8f510624bf",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1447395abe77b5d10c8155bf962e2f80",
+            "engine": "syrtis"
+        },
+        "operation.candidate": {
+            "hash": "4fa4c87e3ecbd02872cdf84952457f82",
+            "engine": "syrtis"
+        },
+        "operation.conflict": {
+            "hash": "888d48ab2877ffe81bc372e3d0cb2639",
+            "engine": "syrtis"
+        },
+        "operation.loading": {
+            "hash": "841bbaf5120ffb09f0e7b14c0403299f",
+            "engine": "syrtis"
+        },
+        "operation.local_create": {
+            "hash": "ef9f2991bd51b05b28d26476f90c2285",
+            "engine": "syrtis"
+        },
+        "operation.local_link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "operation.local_unlink": {
+            "hash": "f9cf586e42e6f29ce2e68e7bd3ace5e5",
+            "engine": "syrtis"
+        },
+        "operation.local_update": {
+            "hash": "d705b0476cdfe536387d31cfdeaeecc2",
+            "engine": "syrtis"
+        },
+        "operation.postponed": {
+            "hash": "1ab68b0531533acbf01b5a24aafef20b",
+            "engine": "syrtis"
+        },
+        "operation.remote_create": {
+            "hash": "4cdbe82d8c60f77da94c0c21318afff3",
+            "engine": "syrtis"
+        },
+        "operation.remote_disable": {
+            "hash": "b3fce49fe9dbb4aac6abbd018fa810e4",
+            "engine": "syrtis"
+        },
+        "operation.remote_remove": {
+            "hash": "597631a77e1f83ca2bf99870de564bac",
+            "engine": "syrtis"
+        },
+        "operation.remote_update": {
+            "hash": "33d8d8f5b8b51a0b771e292086eb3056",
+            "engine": "syrtis"
+        },
+        "operation.unmatched": {
+            "hash": "77f73c2b5e13f8cb99a7d53afe9057fc",
+            "engine": "syrtis"
+        },
+        "operation.up_to_date": {
+            "hash": "f9312032d11c4bef6053cc365d8f5f31",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "438fa33d09e44f2dd509d1a8750d9d34",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "2109967002e11de4444932440367104d",
+            "engine": "syrtis"
+        },
+        "status.applied": {
+            "hash": "56c3fc51bd4423e6fabdb4380b15cd1f",
+            "engine": "syrtis"
+        },
+        "status.dry_run": {
+            "hash": "05a1dcf4fea5f0207cbbbcb0c6334cfe",
+            "engine": "syrtis"
+        },
+        "summary.conflict": {
+            "hash": "bbe58f6702bce03b8cd2bd15faf0412a",
+            "engine": "syrtis"
+        },
+        "summary.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "summary.orphans": {
+            "hash": "37d5fa56961fadd36c220237d87ea37e",
+            "engine": "syrtis"
+        },
+        "summary.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        }
+    },
     "pages/data_sync/definition.pl.yml": {
+        "action.apply": {
+            "hash": "f17e5205364d5f43b9a1ae68ed002dae",
+            "engine": "syrtis"
+        },
+        "action.apply_confirm": {
+            "hash": "c0c7a1ece3d349b9552d5fb14b4d411d",
+            "engine": "syrtis"
+        },
+        "action.cancel": {
+            "hash": "121cad078beccff8a1ea9128c3906546",
+            "engine": "syrtis"
+        },
+        "action.diff": {
+            "hash": "870e7110424049df694648e4f7219f05",
+            "engine": "syrtis"
+        },
+        "action.keep_local": {
+            "hash": "9035c76268e2fdf86024c632d050ff4b",
+            "engine": "syrtis"
+        },
+        "action.keep_remote": {
+            "hash": "046998e0f2d4419a427f47d889296044",
+            "engine": "syrtis"
+        },
+        "action.link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "action.refresh": {
+            "hash": "f43f3edce8c175a7204a803e35514490",
+            "engine": "syrtis"
+        },
+        "column.direction": {
+            "hash": "b597c8ce902d9ec54042301a54b7bfa2",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "035210e7de7e2e10331af1093d5ac4ad",
+            "engine": "syrtis"
+        },
+        "column.operation": {
+            "hash": "046ed7ce962768e75c31f20dd8d66ec5",
+            "engine": "syrtis"
+        },
+        "column.outcome": {
+            "hash": "5c0e84572801f008786ba9b3a1d622c1",
+            "engine": "syrtis"
+        },
+        "column.reason": {
+            "hash": "c1a8b75e9deba0356ff2065dc49abc84",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "f5e46f3ff3a04074745361307cdf9137",
+            "engine": "syrtis"
+        },
+        "diff.field": {
+            "hash": "f0c9a944867826856ffd939d1237bf6a",
+            "engine": "syrtis"
+        },
+        "diff.local": {
+            "hash": "99f85299c642f28fdd50fb49ede61c1c",
+            "engine": "syrtis"
+        },
+        "diff.remote": {
+            "hash": "b9a3109f3f6060ac36015f8f510624bf",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1447395abe77b5d10c8155bf962e2f80",
+            "engine": "syrtis"
+        },
+        "operation.candidate": {
+            "hash": "4fa4c87e3ecbd02872cdf84952457f82",
+            "engine": "syrtis"
+        },
+        "operation.conflict": {
+            "hash": "888d48ab2877ffe81bc372e3d0cb2639",
+            "engine": "syrtis"
+        },
+        "operation.loading": {
+            "hash": "841bbaf5120ffb09f0e7b14c0403299f",
+            "engine": "syrtis"
+        },
+        "operation.local_create": {
+            "hash": "ef9f2991bd51b05b28d26476f90c2285",
+            "engine": "syrtis"
+        },
+        "operation.local_link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "operation.local_unlink": {
+            "hash": "f9cf586e42e6f29ce2e68e7bd3ace5e5",
+            "engine": "syrtis"
+        },
+        "operation.local_update": {
+            "hash": "d705b0476cdfe536387d31cfdeaeecc2",
+            "engine": "syrtis"
+        },
+        "operation.postponed": {
+            "hash": "1ab68b0531533acbf01b5a24aafef20b",
+            "engine": "syrtis"
+        },
+        "operation.remote_create": {
+            "hash": "4cdbe82d8c60f77da94c0c21318afff3",
+            "engine": "syrtis"
+        },
+        "operation.remote_disable": {
+            "hash": "b3fce49fe9dbb4aac6abbd018fa810e4",
+            "engine": "syrtis"
+        },
+        "operation.remote_remove": {
+            "hash": "597631a77e1f83ca2bf99870de564bac",
+            "engine": "syrtis"
+        },
+        "operation.remote_update": {
+            "hash": "33d8d8f5b8b51a0b771e292086eb3056",
+            "engine": "syrtis"
+        },
+        "operation.unmatched": {
+            "hash": "77f73c2b5e13f8cb99a7d53afe9057fc",
+            "engine": "syrtis"
+        },
+        "operation.up_to_date": {
+            "hash": "f9312032d11c4bef6053cc365d8f5f31",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "438fa33d09e44f2dd509d1a8750d9d34",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "2109967002e11de4444932440367104d",
+            "engine": "syrtis"
+        },
+        "status.applied": {
+            "hash": "56c3fc51bd4423e6fabdb4380b15cd1f",
+            "engine": "syrtis"
+        },
+        "status.dry_run": {
+            "hash": "05a1dcf4fea5f0207cbbbcb0c6334cfe",
+            "engine": "syrtis"
+        },
+        "summary.conflict": {
+            "hash": "bbe58f6702bce03b8cd2bd15faf0412a",
+            "engine": "syrtis"
+        },
+        "summary.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "summary.orphans": {
+            "hash": "37d5fa56961fadd36c220237d87ea37e",
+            "engine": "syrtis"
+        },
+        "summary.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        }
+    },
+    "pages/data_sync/definition.pt_BR.yml": {
         "action.apply": {
             "hash": "f17e5205364d5f43b9a1ae68ed002dae",
             "engine": "syrtis"
@@ -2105,7 +2753,331 @@
             "engine": "syrtis"
         }
     },
+    "pages/data_sync/definition.tr.yml": {
+        "action.apply": {
+            "hash": "f17e5205364d5f43b9a1ae68ed002dae",
+            "engine": "syrtis"
+        },
+        "action.apply_confirm": {
+            "hash": "c0c7a1ece3d349b9552d5fb14b4d411d",
+            "engine": "syrtis"
+        },
+        "action.cancel": {
+            "hash": "121cad078beccff8a1ea9128c3906546",
+            "engine": "syrtis"
+        },
+        "action.diff": {
+            "hash": "870e7110424049df694648e4f7219f05",
+            "engine": "syrtis"
+        },
+        "action.keep_local": {
+            "hash": "9035c76268e2fdf86024c632d050ff4b",
+            "engine": "syrtis"
+        },
+        "action.keep_remote": {
+            "hash": "046998e0f2d4419a427f47d889296044",
+            "engine": "syrtis"
+        },
+        "action.link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "action.refresh": {
+            "hash": "f43f3edce8c175a7204a803e35514490",
+            "engine": "syrtis"
+        },
+        "column.direction": {
+            "hash": "b597c8ce902d9ec54042301a54b7bfa2",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "035210e7de7e2e10331af1093d5ac4ad",
+            "engine": "syrtis"
+        },
+        "column.operation": {
+            "hash": "046ed7ce962768e75c31f20dd8d66ec5",
+            "engine": "syrtis"
+        },
+        "column.outcome": {
+            "hash": "5c0e84572801f008786ba9b3a1d622c1",
+            "engine": "syrtis"
+        },
+        "column.reason": {
+            "hash": "c1a8b75e9deba0356ff2065dc49abc84",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "f5e46f3ff3a04074745361307cdf9137",
+            "engine": "syrtis"
+        },
+        "diff.field": {
+            "hash": "f0c9a944867826856ffd939d1237bf6a",
+            "engine": "syrtis"
+        },
+        "diff.local": {
+            "hash": "99f85299c642f28fdd50fb49ede61c1c",
+            "engine": "syrtis"
+        },
+        "diff.remote": {
+            "hash": "b9a3109f3f6060ac36015f8f510624bf",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1447395abe77b5d10c8155bf962e2f80",
+            "engine": "syrtis"
+        },
+        "operation.candidate": {
+            "hash": "4fa4c87e3ecbd02872cdf84952457f82",
+            "engine": "syrtis"
+        },
+        "operation.conflict": {
+            "hash": "888d48ab2877ffe81bc372e3d0cb2639",
+            "engine": "syrtis"
+        },
+        "operation.loading": {
+            "hash": "841bbaf5120ffb09f0e7b14c0403299f",
+            "engine": "syrtis"
+        },
+        "operation.local_create": {
+            "hash": "ef9f2991bd51b05b28d26476f90c2285",
+            "engine": "syrtis"
+        },
+        "operation.local_link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "operation.local_unlink": {
+            "hash": "f9cf586e42e6f29ce2e68e7bd3ace5e5",
+            "engine": "syrtis"
+        },
+        "operation.local_update": {
+            "hash": "d705b0476cdfe536387d31cfdeaeecc2",
+            "engine": "syrtis"
+        },
+        "operation.postponed": {
+            "hash": "1ab68b0531533acbf01b5a24aafef20b",
+            "engine": "syrtis"
+        },
+        "operation.remote_create": {
+            "hash": "4cdbe82d8c60f77da94c0c21318afff3",
+            "engine": "syrtis"
+        },
+        "operation.remote_disable": {
+            "hash": "b3fce49fe9dbb4aac6abbd018fa810e4",
+            "engine": "syrtis"
+        },
+        "operation.remote_remove": {
+            "hash": "597631a77e1f83ca2bf99870de564bac",
+            "engine": "syrtis"
+        },
+        "operation.remote_update": {
+            "hash": "33d8d8f5b8b51a0b771e292086eb3056",
+            "engine": "syrtis"
+        },
+        "operation.unmatched": {
+            "hash": "77f73c2b5e13f8cb99a7d53afe9057fc",
+            "engine": "syrtis"
+        },
+        "operation.up_to_date": {
+            "hash": "f9312032d11c4bef6053cc365d8f5f31",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "438fa33d09e44f2dd509d1a8750d9d34",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "2109967002e11de4444932440367104d",
+            "engine": "syrtis"
+        },
+        "status.applied": {
+            "hash": "56c3fc51bd4423e6fabdb4380b15cd1f",
+            "engine": "syrtis"
+        },
+        "status.dry_run": {
+            "hash": "05a1dcf4fea5f0207cbbbcb0c6334cfe",
+            "engine": "syrtis"
+        },
+        "summary.conflict": {
+            "hash": "bbe58f6702bce03b8cd2bd15faf0412a",
+            "engine": "syrtis"
+        },
+        "summary.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "summary.orphans": {
+            "hash": "37d5fa56961fadd36c220237d87ea37e",
+            "engine": "syrtis"
+        },
+        "summary.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        }
+    },
     "pages/data_sync/definition.ur.yml": {
+        "action.apply": {
+            "hash": "f17e5205364d5f43b9a1ae68ed002dae",
+            "engine": "syrtis"
+        },
+        "action.apply_confirm": {
+            "hash": "c0c7a1ece3d349b9552d5fb14b4d411d",
+            "engine": "syrtis"
+        },
+        "action.cancel": {
+            "hash": "121cad078beccff8a1ea9128c3906546",
+            "engine": "syrtis"
+        },
+        "action.diff": {
+            "hash": "870e7110424049df694648e4f7219f05",
+            "engine": "syrtis"
+        },
+        "action.keep_local": {
+            "hash": "9035c76268e2fdf86024c632d050ff4b",
+            "engine": "syrtis"
+        },
+        "action.keep_remote": {
+            "hash": "046998e0f2d4419a427f47d889296044",
+            "engine": "syrtis"
+        },
+        "action.link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "action.refresh": {
+            "hash": "f43f3edce8c175a7204a803e35514490",
+            "engine": "syrtis"
+        },
+        "column.direction": {
+            "hash": "b597c8ce902d9ec54042301a54b7bfa2",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "035210e7de7e2e10331af1093d5ac4ad",
+            "engine": "syrtis"
+        },
+        "column.operation": {
+            "hash": "046ed7ce962768e75c31f20dd8d66ec5",
+            "engine": "syrtis"
+        },
+        "column.outcome": {
+            "hash": "5c0e84572801f008786ba9b3a1d622c1",
+            "engine": "syrtis"
+        },
+        "column.reason": {
+            "hash": "c1a8b75e9deba0356ff2065dc49abc84",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "f5e46f3ff3a04074745361307cdf9137",
+            "engine": "syrtis"
+        },
+        "diff.field": {
+            "hash": "f0c9a944867826856ffd939d1237bf6a",
+            "engine": "syrtis"
+        },
+        "diff.local": {
+            "hash": "99f85299c642f28fdd50fb49ede61c1c",
+            "engine": "syrtis"
+        },
+        "diff.remote": {
+            "hash": "b9a3109f3f6060ac36015f8f510624bf",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1447395abe77b5d10c8155bf962e2f80",
+            "engine": "syrtis"
+        },
+        "operation.candidate": {
+            "hash": "4fa4c87e3ecbd02872cdf84952457f82",
+            "engine": "syrtis"
+        },
+        "operation.conflict": {
+            "hash": "888d48ab2877ffe81bc372e3d0cb2639",
+            "engine": "syrtis"
+        },
+        "operation.loading": {
+            "hash": "841bbaf5120ffb09f0e7b14c0403299f",
+            "engine": "syrtis"
+        },
+        "operation.local_create": {
+            "hash": "ef9f2991bd51b05b28d26476f90c2285",
+            "engine": "syrtis"
+        },
+        "operation.local_link": {
+            "hash": "61b5316b359ccbdb90fd2fb36ce80802",
+            "engine": "syrtis"
+        },
+        "operation.local_unlink": {
+            "hash": "f9cf586e42e6f29ce2e68e7bd3ace5e5",
+            "engine": "syrtis"
+        },
+        "operation.local_update": {
+            "hash": "d705b0476cdfe536387d31cfdeaeecc2",
+            "engine": "syrtis"
+        },
+        "operation.postponed": {
+            "hash": "1ab68b0531533acbf01b5a24aafef20b",
+            "engine": "syrtis"
+        },
+        "operation.remote_create": {
+            "hash": "4cdbe82d8c60f77da94c0c21318afff3",
+            "engine": "syrtis"
+        },
+        "operation.remote_disable": {
+            "hash": "b3fce49fe9dbb4aac6abbd018fa810e4",
+            "engine": "syrtis"
+        },
+        "operation.remote_remove": {
+            "hash": "597631a77e1f83ca2bf99870de564bac",
+            "engine": "syrtis"
+        },
+        "operation.remote_update": {
+            "hash": "33d8d8f5b8b51a0b771e292086eb3056",
+            "engine": "syrtis"
+        },
+        "operation.unmatched": {
+            "hash": "77f73c2b5e13f8cb99a7d53afe9057fc",
+            "engine": "syrtis"
+        },
+        "operation.up_to_date": {
+            "hash": "f9312032d11c4bef6053cc365d8f5f31",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "438fa33d09e44f2dd509d1a8750d9d34",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "2109967002e11de4444932440367104d",
+            "engine": "syrtis"
+        },
+        "status.applied": {
+            "hash": "56c3fc51bd4423e6fabdb4380b15cd1f",
+            "engine": "syrtis"
+        },
+        "status.dry_run": {
+            "hash": "05a1dcf4fea5f0207cbbbcb0c6334cfe",
+            "engine": "syrtis"
+        },
+        "summary.conflict": {
+            "hash": "bbe58f6702bce03b8cd2bd15faf0412a",
+            "engine": "syrtis"
+        },
+        "summary.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "summary.orphans": {
+            "hash": "37d5fa56961fadd36c220237d87ea37e",
+            "engine": "syrtis"
+        },
+        "summary.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        }
+    },
+    "pages/data_sync/definition.vi.yml": {
         "action.apply": {
             "hash": "f17e5205364d5f43b9a1ae68ed002dae",
             "engine": "syrtis"
@@ -2669,6 +3641,66 @@
             "engine": "syrtis"
         }
     },
+    "pages/data_sync/index.id.yml": {
+        "column.definition": {
+            "hash": "e08fe9c2703132077222c245e995ac5e",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1782b36d90c92c99b685b98e690e96e5",
+            "engine": "syrtis"
+        },
+        "open": {
+            "hash": "41cb28c7559dc94d196322bb27538adc",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "fd2424e6d2290a810d0e53402ffc708b",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "9ac80f6ff7fa4852fc3359a6fa042a00",
+            "engine": "syrtis"
+        }
+    },
+    "pages/data_sync/index.it.yml": {
+        "column.definition": {
+            "hash": "e08fe9c2703132077222c245e995ac5e",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1782b36d90c92c99b685b98e690e96e5",
+            "engine": "syrtis"
+        },
+        "open": {
+            "hash": "41cb28c7559dc94d196322bb27538adc",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "fd2424e6d2290a810d0e53402ffc708b",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "9ac80f6ff7fa4852fc3359a6fa042a00",
+            "engine": "syrtis"
+        }
+    },
     "pages/data_sync/index.ja.yml": {
         "column.definition": {
             "hash": "e08fe9c2703132077222c245e995ac5e",
@@ -2729,7 +3761,67 @@
             "engine": "syrtis"
         }
     },
+    "pages/data_sync/index.nl.yml": {
+        "column.definition": {
+            "hash": "e08fe9c2703132077222c245e995ac5e",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1782b36d90c92c99b685b98e690e96e5",
+            "engine": "syrtis"
+        },
+        "open": {
+            "hash": "41cb28c7559dc94d196322bb27538adc",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "fd2424e6d2290a810d0e53402ffc708b",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "9ac80f6ff7fa4852fc3359a6fa042a00",
+            "engine": "syrtis"
+        }
+    },
     "pages/data_sync/index.pl.yml": {
+        "column.definition": {
+            "hash": "e08fe9c2703132077222c245e995ac5e",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1782b36d90c92c99b685b98e690e96e5",
+            "engine": "syrtis"
+        },
+        "open": {
+            "hash": "41cb28c7559dc94d196322bb27538adc",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "fd2424e6d2290a810d0e53402ffc708b",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "9ac80f6ff7fa4852fc3359a6fa042a00",
+            "engine": "syrtis"
+        }
+    },
+    "pages/data_sync/index.pt_BR.yml": {
         "column.definition": {
             "hash": "e08fe9c2703132077222c245e995ac5e",
             "engine": "syrtis"
@@ -2819,7 +3911,67 @@
             "engine": "syrtis"
         }
     },
+    "pages/data_sync/index.tr.yml": {
+        "column.definition": {
+            "hash": "e08fe9c2703132077222c245e995ac5e",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1782b36d90c92c99b685b98e690e96e5",
+            "engine": "syrtis"
+        },
+        "open": {
+            "hash": "41cb28c7559dc94d196322bb27538adc",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "fd2424e6d2290a810d0e53402ffc708b",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "9ac80f6ff7fa4852fc3359a6fa042a00",
+            "engine": "syrtis"
+        }
+    },
     "pages/data_sync/index.ur.yml": {
+        "column.definition": {
+            "hash": "e08fe9c2703132077222c245e995ac5e",
+            "engine": "syrtis"
+        },
+        "column.local": {
+            "hash": "1ae4f7d3fa58a2328b1847a3eaa3e94c",
+            "engine": "syrtis"
+        },
+        "column.remote": {
+            "hash": "493cc6c4d532d5bb40db9e9918aca908",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "1782b36d90c92c99b685b98e690e96e5",
+            "engine": "syrtis"
+        },
+        "open": {
+            "hash": "41cb28c7559dc94d196322bb27538adc",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "fd2424e6d2290a810d0e53402ffc708b",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "9ac80f6ff7fa4852fc3359a6fa042a00",
+            "engine": "syrtis"
+        }
+    },
+    "pages/data_sync/index.vi.yml": {
         "column.definition": {
             "hash": "e08fe9c2703132077222c245e995ac5e",
             "engine": "syrtis"

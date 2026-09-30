@@ -1,0 +1,46 @@
+page_title: Synchronisatieplan
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'Niets te doen: beide zijden zijn het eens.'
+summary:
+  local: 'Lokale entiteiten'
+  remote: Afstandsadapter
+  orphans: 'Weesobjecten (afstands / lokaal)'
+  conflict: Conflicten
+column:
+  direction: Richting
+  operation: Actie
+  local: Lokaal
+  remote: Afstandelijk
+  reason: Waarom
+  outcome: Resultaat
+action:
+  cancel: Annuleren
+  refresh: 'Plan opnieuw'
+  apply: 'Pas het plan toe'
+  apply_confirm: 'Elke geplande wijziging aan beide zijden schrijven?'
+  link: Koppelen
+  keep_local: 'Lokaal behouden'
+  keep_remote: 'Afstandelijk behouden'
+  diff: Velden
+diff:
+  field: Veld
+  local: 'Lokale waarde'
+  remote: Afstandswaarde
+status:
+  dry_run: 'Droogloop: nog niets geschreven.'
+  applied: 'Plan toegepast. Plan opnieuw om te zien wat er nog over is.'
+operation:
+  loading: Plannen
+  local_link: Koppelen
+  local_create: 'Lokaal aanmaken'
+  remote_create: 'Afstandsgewijs aanmaken'
+  local_update: Bijwerken
+  remote_update: 'Afstandsgewijs bijwerken'
+  local_unlink: Ontkoppelen
+  remote_disable: 'Afstandsgewijs uitschakelen'
+  remote_remove: 'Afstandsgewijs verwijderen'
+  candidate: Kandidaat
+  conflict: Conflict
+  unmatched: 'Niet overeenkomend'
+  postponed: Uitgesteld
+  up_to_date: Bijgewerkt

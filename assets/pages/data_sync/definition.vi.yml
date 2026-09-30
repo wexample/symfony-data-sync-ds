@@ -1,0 +1,46 @@
+page_title: 'Kế hoạch đồng bộ'
+page_icon: 'ph:bold/arrows-left-right'
+empty: 'Không có gì để làm: cả hai bên đều đồng ý.'
+summary:
+  local: 'Thực thể cục bộ'
+  remote: 'Bộ điều hợp từ xa'
+  orphans: 'Mồ côi (từ xa / cục bộ)'
+  conflict: 'Xung đột'
+column:
+  direction: Hướng
+  operation: 'Hoạt động'
+  local: 'Cục bộ'
+  remote: 'Từ xa'
+  reason: 'Tại sao'
+  outcome: 'Kết quả'
+action:
+  cancel: Hủy
+  refresh: 'Lập lại kế hoạch'
+  apply: 'Áp dụng kế hoạch'
+  apply_confirm: 'Ghi lại mọi thay đổi đã lên kế hoạch trên cả hai bên?'
+  link: 'Liên kết'
+  keep_local: 'Giữ cục bộ'
+  keep_remote: 'Giữ từ xa'
+  diff: Trường
+diff:
+  field: Trường
+  local: 'Giá trị cục bộ'
+  remote: 'Giá trị từ xa'
+status:
+  dry_run: 'Chạy thử: chưa ghi gì cả.'
+  applied: 'Kế hoạch đã được áp dụng. Lập lại kế hoạch để xem còn lại gì.'
+operation:
+  loading: 'Đang lập kế hoạch'
+  local_link: 'Liên kết cục bộ'
+  local_create: 'Tạo cục bộ'
+  remote_create: 'Tạo từ xa'
+  local_update: 'Cập nhật'
+  remote_update: 'Cập nhật từ xa'
+  local_unlink: 'Gỡ liên kết'
+  remote_disable: 'Vô hiệu hóa từ xa'
+  remote_remove: 'Xóa từ xa'
+  candidate: 'Ứng viên'
+  conflict: 'Xung đột'
+  unmatched: 'Không khớp'
+  postponed: 'Đã hoãn'
+  up_to_date: 'Đã cập nhật'

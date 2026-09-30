@@ -1,0 +1,8 @@
+page_title: 'Gegevens synchroniseren'
+page_icon: 'ph:bold/arrows-clockwise'
+empty: 'Er is geen synchronisatiedefinitie gedefinieerd in deze applicatie.'
+column:
+  definition: Definitie
+  local: 'Lokale entiteiten'
+  remote: 'Externe adapter'
+open: 'Bekijk het plan'

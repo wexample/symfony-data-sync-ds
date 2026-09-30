@@ -1,0 +1,8 @@
+page_title: 'Đồng bộ dữ liệu'
+page_icon: 'ph:bold/arrows-clockwise'
+empty: 'Không có định nghĩa đồng bộ nào được khai báo trong ứng dụng này.'
+column:
+  definition: 'Định nghĩa'
+  local: 'Thực thể cục bộ'
+  remote: 'Bộ điều hợp từ xa'
+open: 'Xem kế hoạch'
