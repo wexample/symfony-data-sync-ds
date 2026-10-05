@@ -3,7 +3,7 @@
   "description": "Design-system screens to review and apply symfony-data-sync plans",
   "type": "library",
   "license": "MIT",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "autoload": {
     "psr-4": {
       "Wexample\\SymfonyDataSyncDs\\": "src/"

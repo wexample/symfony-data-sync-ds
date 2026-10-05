@@ -1,6 +1,6 @@
 # symfony-data-sync-ds
 
-Version: 2.0.9
+Version: 2.0.10
 
 Open `/data-sync/` with the access role and pick a definition. Its page plans at once, without writing: the status line says so.
 
