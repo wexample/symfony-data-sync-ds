@@ -3,7 +3,7 @@
   "description": "Design-system screens to review and apply symfony-data-sync plans",
   "type": "library",
   "license": "MIT",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "autoload": {
     "psr-4": {
       "Wexample\\SymfonyDataSyncDs\\": "src/"
@@ -22,9 +22,9 @@
   ],
   "require": {
     "php": ">=8.5",
-    "wexample/symfony-api": ">=10.0.0",
+    "wexample/symfony-api": ">=11.0.0",
     "wexample/symfony-data-sync": ">=3.0.0",
-    "wexample/symfony-design-system": ">=29.0.0",
+    "wexample/symfony-design-system": ">=30.0.0",
     "wexample/symfony-helpers": ">=15.0.0",
     "wexample/symfony-loader": ">=20.0.0"
   },
