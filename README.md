@@ -1,6 +1,6 @@
 # symfony-data-sync-ds
 
-Version: 2.0.13
+Version: 2.0.14
 
 Open `/data-sync/` with the access role and pick a definition. Its page plans at once, without writing: the status line says so.
 
@@ -55,11 +55,11 @@ Visit the [Wexample Suite documentation](https://docs.wexample.com) for the comp
 ## Dependencies
 
 - php: >=8.5
-- wexample/symfony-api: >=11.0.0
+- wexample/symfony-api: >=12.0.0
 - wexample/symfony-data-sync: >=3.0.0
-- wexample/symfony-design-system: >=31.0.0
+- wexample/symfony-design-system: >=32.0.0
 - wexample/symfony-helpers: >=15.0.0
-- wexample/symfony-loader: >=21.0.0
+- wexample/symfony-loader: >=22.0.0
 
 ## Versioning & Compatibility Policy
 
