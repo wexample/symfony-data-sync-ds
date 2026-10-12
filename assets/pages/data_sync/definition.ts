@@ -222,32 +222,32 @@ export default class extends Page {
    */
   private diffRow(relation: Relation, relationRow: HTMLElement): HTMLElement {
     const grid = document.createElement('div');
-    grid.className = 'data-sync--diff';
+    grid.className = 'diff data-sync--diff';
 
     for (const title of [this.label('field'), this.label('local'), '', this.label('remote')]) {
-      grid.append(this.span('data-sync--diff-head', title));
+      grid.append(this.span('diff--head', title));
     }
 
     for (const diff of relation.diffs) {
-      const local = this.span('data-sync--diff-value', this.valueText(diff.localValue));
-      const remote = this.span('data-sync--diff-value', this.valueText(diff.remoteValue));
-      local.classList.toggle('data-sync--diff-value--overwritten', diff.target === 'local');
-      local.classList.toggle('data-sync--diff-value--winning', diff.target === 'remote');
-      remote.classList.toggle('data-sync--diff-value--overwritten', diff.target === 'remote');
-      remote.classList.toggle('data-sync--diff-value--winning', diff.target === 'local');
+      const local = this.span('diff--value', this.valueText(diff.localValue));
+      const remote = this.span('diff--value', this.valueText(diff.remoteValue));
+      local.classList.toggle('diff--value--old', diff.target === 'local');
+      local.classList.toggle('diff--value--new', diff.target === 'remote');
+      remote.classList.toggle('diff--value--old', diff.target === 'remote');
+      remote.classList.toggle('diff--value--new', diff.target === 'local');
 
-      const arrow = this.span('data-sync--diff-arrow', '');
+      const arrow = this.span('diff--arrow', '');
       arrow.append(this.icon({ local: 'to-local', remote: 'to-remote', none: 'both' }[diff.target]));
 
       const field = diff.localField === diff.remoteField ? diff.localField : `${diff.localField} · ${diff.remoteField}`;
-      grid.append(this.span('data-sync--diff-field', field), local, arrow, remote);
+      grid.append(this.span('diff--field', field), local, arrow, remote);
     }
 
     // A field conflict on a known pair is settled here, beside the values it
     // chooses between; an ambiguous match has no diffs to settle.
     if (relation.operation === OPERATION_CONFLICT && relation.local && relation.remote) {
       const localId = relation.local.id;
-      const decisions = this.span('data-sync--diff-actions', '');
+      const decisions = this.span('diff--actions', '');
       decisions.append(
         this.button('keep-local', this.label('keepLocal'), () => void this.resolve(localId, 'local')),
         this.button('keep-remote', this.label('keepRemote'), () => void this.resolve(localId, 'remote')),
