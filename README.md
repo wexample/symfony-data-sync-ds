@@ -1,6 +1,6 @@
 # symfony-data-sync-ds
 
-Version: 2.0.19
+Version: 2.0.20
 
 Open `/data-sync/` with the access role and pick a definition. Its page plans at once, without writing: the status line says so.
 
@@ -55,9 +55,9 @@ The suite includes packages for configuration management, file handling, prompts
 - php: >=8.5
 - wexample/symfony-api: >=14.0.0
 - wexample/symfony-data-sync: >=3.1.0
-- wexample/symfony-design-system: >=37.0.0
+- wexample/symfony-design-system: >=38.0.0
 - wexample/symfony-helpers: >=17.0.0
-- wexample/symfony-loader: >=23.2.0
+- wexample/symfony-loader: >=23.3.0
 
 ## Versioning & Compatibility Policy
 
