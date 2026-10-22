@@ -1,92 +1,30 @@
 # symfony-data-sync-ds
 
-Version: 2.0.22
+Version: 2.0.23
 
-Open `/data-sync/` with the access role and pick a definition. Its page plans at once, without writing: the status line says so.
-
-- **Fields** unfolds the two panes of an update or a conflict. An arrow shows where each value travels; `?` marks a conflict the policy left to a human.
-- **Link** on a candidate records the pair, as `data-sync:link` does, and plans again.
-- **Keep local** / **Keep remote** on a field conflict writes the kept side's values on the other one, through `SyncResolver`, and plans again.
-- **Apply the plan** runs it for real after a confirmation; the table then shows each outcome. Plan again to see what is left: a sync converges over runs.
-
-The screen talks to three endpoints, usable by other screens or scripts holding the role:
-
-| Endpoint | Does |
-|---|---|
-| `GET api/data-sync/plan/{key}` | plans, dry run: `SyncReport::toArray()` in the envelope |
-| `POST api/data-sync/run/{key}` | plans and runs |
-| `POST api/data-sync/link/{key}` with `{"localId", "remoteId"}` | links by hand; an error envelope says why it could not |
-| `POST api/data-sync/resolve/{key}` with `{"localId", "kept": "local"\|"remote"}` | settles the pair's field conflict; an error envelope when there is none |
+Design-system screens to review and apply symfony-data-sync plans
 
 ## Table of Contents
 
-- [Architecture](#architecture)
-- [Integration in the Suite](#integration-in-the-suite)
-- [Dependencies](#dependencies)
-- [Versioning & Compatibility Policy](#versioning--compatibility-policy)
-- [License](#license)
-- [About us](#about-us)
-- [Migration Notes](#migration-notes)
+- [Installation](#installation)
+- [Introduction](#introduction)
 
-## Architecture
+## Installation
 
-Two controllers and two pages over `symfony-data-sync`'s services; nothing here plans or writes by itself.
+```php
+// config/bundles.php
+Wexample\SymfonyDataSync\WexampleSymfonyDataSyncBundle::class => ['all' => true],
+Wexample\SymfonyDataSyncDs\WexampleSymfonyDataSyncDsBundle::class => ['all' => true],
+```
 
-src/Controller/Pages/DataSyncController.php renders `index` (every definition, its local class and adapter class) and `definition` (one definition's summary). Neither page plans: planning lists the remote, so the definition page renders at once and asks for its plan afterwards.
+```yaml
+# config/packages/wexample_symfony_data_sync_ds.yaml — optional
+wexample_symfony_data_sync_ds:
+  access_role: ROLE_ADMIN   # the default
+```
 
-src/Api/Controller/DataSyncController.php is a thin layer over `SyncRunner` (plan and run, the same filters as `data-sync:run`) and `SyncLinker` (the checks and the link of `data-sync:link`). Answers are `SyncReport::toArray()`, the contract `symfony-data-sync` keeps stable.
+Controllers are routed by the application's `routing.controllers` import. The API routes are exposed to the JS router.
 
-assets/pages/data_sync/definition.ts fetches the plan through `RoutingService` and `unwrapApiEnvelope()`, and builds the table with DOM nodes and `textContent` only — values come from outside services. Markers come from `<template>` elements the page renders once per operation with the design system's `marker()`; labels come from a template's data attributes, so the script holds no text.
+`symfony-data-sync-ds` is the screen of `symfony-data-sync`, built on the design system. `/data-sync/` lists the definitions; each definition's page loads its plan as a dry run and shows every relation — link, create, update, unlink, conflict, candidate — with, for updates and conflicts, the differing fields side by side: local value, the direction it will travel, remote value, the side to be written in bold.
 
-Both controllers carry `#[IsGranted(DataSyncAccessVoter::ATTRIBUTE)]`; src/Security/DataSyncAccessVoter.php answers with the configured `access_role`.
-
-Tests: tests/Unit/Api/Controller/DataSyncControllerTest.php runs the endpoints over real `SyncRunner` and `SyncLinker`, with in-memory definitions processed by `symfony-data-sync`'s own configuration.
-
-## Integration in the Suite
-
-This package is part of the Wexample Suite — a collection of high-quality, modular tools designed to work seamlessly together across multiple languages and environments.
-
-### Related Packages
-
-The suite includes packages for configuration management, file handling, prompts, and more. Each package can be used independently or as part of the integrated suite.
-
-## Dependencies
-
-- php: >=8.5
-- wexample/symfony-api: >=14.0.0
-- wexample/symfony-data-sync: >=3.1.0
-- wexample/symfony-design-system: >=39.0.0
-- wexample/symfony-helpers: >=18.0.0
-- wexample/symfony-loader: >=25.0.0
-
-## Versioning & Compatibility Policy
-
-Wexample packages follow **Semantic Versioning** (SemVer):
-
-- **MAJOR**: Breaking changes
-- **MINOR**: New features, backward compatible
-- **PATCH**: Bug fixes, backward compatible
-
-We maintain backward compatibility within major versions and provide clear migration guides for breaking changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-Free to use in both personal and commercial projects.
-
-## About us
-
-[Wexample](https://wexample.com) stands as a cornerstone of the digital ecosystem — a collective of seasoned engineers, researchers, and creators driven by a relentless pursuit of technological excellence. More than a media platform, it has grown into a vibrant community where innovation meets craftsmanship, and where every line of code reflects a commitment to clarity, durability, and shared intelligence.
-
-This packages suite embodies this spirit. Trusted by professionals and enthusiasts alike, it delivers a consistent, high-quality foundation for modern development — open, elegant, and battle-tested. Its reputation is built on years of collaboration, refinement, and rigorous attention to detail, making it a natural choice for those who demand both robustness and beauty in their tools.
-
-Wexample cultivates a culture of mastery. Each package, each contribution carries the mark of a community that values precision, ethics, and innovation — a community proud to shape the future of digital craftsmanship.
-
-Built and maintained by [Romain Weeger](https://weeger.io).
-
-## Migration Notes
-
-When upgrading between major versions, refer to the migration guides in the documentation.
-
-Breaking changes are clearly documented with upgrade paths and examples.
+From there a human does what the planner must not: link a candidate the fuzzy rule proposed, settle a field conflict by keeping one side, then apply the plan, which writes on both sides. Access follows a configurable role, `ROLE_ADMIN` by default.
