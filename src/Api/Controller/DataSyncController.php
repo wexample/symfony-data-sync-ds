@@ -21,7 +21,7 @@ use Wexample\SymfonyHelpers\Controller\AbstractController;
  * for real, a manual link and a conflict settled by hand. Plans and runs
  * answer SyncReport::toArray().
  */
-#[Route(path: 'api/data-sync/', name: 'api_data_sync_')]
+#[Route(path: '_api/data-sync/', name: 'api_data_sync_')]
 #[IsGranted(DataSyncAccessVoter::ATTRIBUTE)]
 class DataSyncController extends AbstractApiController
 {
