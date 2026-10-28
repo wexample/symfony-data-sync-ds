@@ -1,6 +1,6 @@
 # symfony-data-sync-ds
 
-Version: 3.0.0
+Version: 3.0.1
 
 Design-system screens to review and apply symfony-data-sync plans
 
